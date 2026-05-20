@@ -37,9 +37,9 @@ pnpm dlx shadcn@latest add <component>
 
 | Path | Purpose |
 |------|---------|
-| `src/pages/` | Route pages (home, work, case studies) |
-| `src/components/` | Layout, case-study shells, shadcn UI |
-| `public/images/` | Screenshots and videos |
+| `src/pages/home.tsx` | Homepage |
+| `src/components/ui/` | shadcn UI used on the homepage |
+| `public/CNAME` | Custom domain for GitHub Pages |
 
 ## DNS (Squarespace)
 
