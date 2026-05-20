@@ -3,34 +3,8 @@ import { Link } from "react-router-dom"
 import { ProjectCard } from "@/components/project-card"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Separator } from "@/components/ui/separator"
 import { CV_URL, LINKEDIN_URL } from "@/lib/constants"
 import { getEmailAddress } from "@/lib/email"
-
-const experience = [
-  {
-    period: "2025–present",
-    role: "Design System Lead · World Food Programme",
-    detail: "Code-based, AI-ready design system for WFP’s IT portfolio.",
-  },
-  {
-    period: "2022–2025",
-    role: "Principal Product Designer · Sitecore",
-    detail:
-      "Design systems, platform unification, and product design across 10+ products after five acquisitions.",
-  },
-  {
-    period: "2019–2022",
-    role: "UX Design Manager · Sitecore",
-    detail: "Customer-first process and team growth on Content Hub.",
-  },
-  {
-    period: "2016–2019",
-    role: "UX Designer · Stylelabs → Sitecore",
-    detail:
-      "SaaS transition, design culture, and UX standards at a scaling startup.",
-  },
-]
 
 export function HomePage() {
   const email = getEmailAddress()
@@ -42,15 +16,15 @@ export function HomePage() {
           <p className="text-xs font-semibold tracking-wider text-primary uppercase">
             Product design · Design engineering
           </p>
-          <h1 className="mt-4 max-w-3xl font-heading text-4xl font-semibold tracking-tight sm:text-5xl lg:text-[3.25rem] lg:leading-[1.15]">
-            I turn complex problems into usable solutions
+          <h1 className="mt-4 max-w-3xl font-heading text-5xl font-semibold tracking-tight sm:text-5xl lg:text-[3.25rem] lg:leading-[1.15]">
+            <span className="text-primary">Frank Grinaert,</span> Product
+            designer who turns complex problems into usable solutions
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
             Lead product designer specialised in enterprise software, design
             systems, and platform UX. I work where design meets engineering:
-            code-based systems, cross-functional delivery, and outcomes teams
-            can measure — even when the metric is adoption and velocity, not
-            vanity dashboards.
+            code-based systems, cross-functional delivery, and tangible
+            outcomes.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <Button render={<Link to="/work" />}>View work</Button>
@@ -190,71 +164,6 @@ export function HomePage() {
                 </p>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-6xl px-6 py-20 lg:px-8">
-        <p className="text-xs font-semibold tracking-wider text-primary uppercase">
-          Background
-        </p>
-        <h2 className="mt-2 font-heading text-2xl font-semibold">Experience</h2>
-        <dl className="mt-10">
-          {experience.map((item, i) => (
-            <div key={item.period}>
-              {i > 0 ? <Separator className="my-6" /> : null}
-              <div className="grid gap-2 sm:grid-cols-[10rem_1fr] sm:gap-8">
-                <dt className="text-sm text-muted-foreground">{item.period}</dt>
-                <dd>
-                  <p className="font-medium">{item.role}</p>
-                  <p className="mt-1 text-sm text-muted-foreground">
-                    {item.detail}
-                  </p>
-                </dd>
-              </div>
-            </div>
-          ))}
-        </dl>
-        <p className="mt-8 text-sm text-muted-foreground">
-          Full résumé:{" "}
-          <a
-            href={CV_URL}
-            className="font-medium text-primary hover:underline"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            CV in Figma
-          </a>
-        </p>
-      </section>
-
-      <section className="bg-primary text-primary-foreground">
-        <div className="mx-auto max-w-6xl px-6 py-16 lg:px-8 lg:py-20">
-          <h2 className="font-heading text-2xl font-semibold">Let’s talk</h2>
-          <p className="mt-3 max-w-lg text-primary-foreground/85">
-            Portfolio reviews, design system work, or experience operations —
-            I’m happy to walk through any case study in detail.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Button
-              className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
-              render={<a href={`mailto:${email}`} />}
-            >
-              Email me
-            </Button>
-            <Button
-              variant="outline"
-              className="border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10"
-              render={
-                <a
-                  href={LINKEDIN_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                />
-              }
-            >
-              LinkedIn
-            </Button>
           </div>
         </div>
       </section>

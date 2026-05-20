@@ -20,9 +20,6 @@ export function SiteHeader() {
           {SITE_NAME}
         </Link>
         <nav className="flex flex-wrap items-center gap-x-4 gap-y-2" aria-label="Primary">
-          <NavLink to="/" end className={navLinkClass}>
-            Home
-          </NavLink>
           <NavLink to="/work" className={navLinkClass}>
             Work
           </NavLink>
