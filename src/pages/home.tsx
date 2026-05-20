@@ -35,8 +35,8 @@ export function HomePage() {
               <a href={CV_URL} target="_blank" rel="noopener noreferrer" />
             }
           >
-            CV
             <ExternalLink />
+            CV
           </Button>
           <Button
             size="lg"
@@ -49,8 +49,8 @@ export function HomePage() {
               />
             }
           >
-            LinkedIn
             <ExternalLink />
+            LinkedIn
           </Button>
           <Button size="lg" variant="outline" onClick={handleCopyEmail}>
             {emailCopied ? <Check /> : <Mail />}
