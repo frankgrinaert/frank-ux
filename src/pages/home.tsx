@@ -27,7 +27,8 @@ const experience = [
   {
     period: "2016–2019",
     role: "UX Designer · Stylelabs → Sitecore",
-    detail: "SaaS transition, design culture, and UX standards at a scaling startup.",
+    detail:
+      "SaaS transition, design culture, and UX standards at a scaling startup.",
   },
 ]
 
@@ -38,24 +39,39 @@ export function HomePage() {
     <main>
       <section className="border-b border-border bg-muted/30">
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-28">
-          <p className="text-xs font-semibold uppercase tracking-wider text-primary">
+          <p className="text-xs font-semibold tracking-wider text-primary uppercase">
             Product design · Design engineering
           </p>
           <h1 className="mt-4 max-w-3xl font-heading text-4xl font-semibold tracking-tight sm:text-5xl lg:text-[3.25rem] lg:leading-[1.15]">
-            I help teams ship cohesive products — not mock-ups over the wall.
+            I turn complex problems into usable solutions
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            Lead product designer specialised in enterprise software, design systems, and platform UX. I
-            work where design meets engineering: code-based systems, cross-functional delivery, and
-            outcomes teams can measure — even when the metric is adoption and velocity, not vanity
-            dashboards.
+            Lead product designer specialised in enterprise software, design
+            systems, and platform UX. I work where design meets engineering:
+            code-based systems, cross-functional delivery, and outcomes teams
+            can measure — even when the metric is adoption and velocity, not
+            vanity dashboards.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <Button render={<Link to="/work" />}>View work</Button>
-            <Button variant="outline" render={<a href={CV_URL} target="_blank" rel="noopener noreferrer" />}>
+            <Button
+              variant="outline"
+              render={
+                <a href={CV_URL} target="_blank" rel="noopener noreferrer" />
+              }
+            >
               CV
             </Button>
-            <Button variant="outline" render={<a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" />}>
+            <Button
+              variant="outline"
+              render={
+                <a
+                  href={LINKEDIN_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                />
+              }
+            >
               LinkedIn
             </Button>
             <Button variant="outline" render={<a href={`mailto:${email}`} />}>
@@ -68,14 +84,21 @@ export function HomePage() {
       <section className="mx-auto max-w-6xl px-6 py-20 lg:px-8">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-wider text-primary">Selected work</p>
-            <h2 className="mt-2 font-heading text-2xl font-semibold">Case studies</h2>
+            <p className="text-xs font-semibold tracking-wider text-primary uppercase">
+              Selected work
+            </p>
+            <h2 className="mt-2 font-heading text-2xl font-semibold">
+              Case studies
+            </h2>
             <p className="mt-2 max-w-xl text-muted-foreground">
-              Each story starts with the business problem, then traces how product and design decisions
-              connected to what shipped.
+              Each story starts with the business problem, then traces how
+              product and design decisions connected to what shipped.
             </p>
           </div>
-          <Link to="/work" className="text-sm font-medium text-primary hover:underline">
+          <Link
+            to="/work"
+            className="text-sm font-medium text-primary hover:underline"
+          >
             All projects →
           </Link>
         </div>
@@ -110,12 +133,16 @@ export function HomePage() {
 
       <section className="border-y border-border bg-muted/30">
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8">
-          <p className="text-xs font-semibold uppercase tracking-wider text-primary">How I work</p>
-          <h2 className="mt-2 font-heading text-2xl font-semibold">Design engineering, not handoffs</h2>
+          <p className="text-xs font-semibold tracking-wider text-primary uppercase">
+            How I work
+          </p>
+          <h2 className="mt-2 font-heading text-2xl font-semibold">
+            Design engineering, not handoffs
+          </h2>
           <p className="mt-4 max-w-2xl text-muted-foreground">
-            I sit closest to problems where design must survive contact with production: design tokens in
-            code, component APIs, migration plans, and the operational glue between design, product, and
-            engineering.
+            I sit closest to problems where design must survive contact with
+            production: design tokens in code, component APIs, migration plans,
+            and the operational glue between design, product, and engineering.
           </p>
           <div className="mt-12 grid gap-10 md:grid-cols-2">
             <Card>
@@ -124,16 +151,24 @@ export function HomePage() {
               </CardHeader>
               <CardContent className="space-y-3 text-sm text-muted-foreground">
                 <p>
-                  <strong className="text-foreground">Adoption over artefacts</strong> — a design system
-                  only exists when product teams ship with it.
+                  <strong className="text-foreground">
+                    Adoption over artefacts
+                  </strong>{" "}
+                  — a design system only exists when product teams ship with it.
                 </p>
                 <p>
-                  <strong className="text-foreground">Velocity with quality</strong> — reusable components
-                  so engineering spends less time reinventing UI.
+                  <strong className="text-foreground">
+                    Velocity with quality
+                  </strong>{" "}
+                  — reusable components so engineering spends less time
+                  reinventing UI.
                 </p>
                 <p>
-                  <strong className="text-foreground">Business context first</strong> — I want to know why
-                  a project was prioritised before I open Figma.
+                  <strong className="text-foreground">
+                    Business context first
+                  </strong>{" "}
+                  — I want to know why a project was prioritised before I open
+                  Figma.
                 </p>
               </CardContent>
             </Card>
@@ -143,13 +178,15 @@ export function HomePage() {
               </CardHeader>
               <CardContent className="space-y-3 text-sm text-muted-foreground">
                 <p>
-                  I do my best work with people who are excellent at what they do and generous with what
-                  they know. I value craft, curiosity, humility, and transparency.
+                  I do my best work with people who are excellent at what they
+                  do and generous with what they know. I value craft, curiosity,
+                  humility, and transparency.
                 </p>
                 <p>
-                  Continuous learning matters to me, as a designer and as a lead. I mentor, run
-                  communities of practice, and treat design ops as a product: tooling and rituals that help
-                  everyone move faster without lowering the bar.
+                  Continuous learning matters to me, as a designer and as a
+                  lead. I mentor, run communities of practice, and treat design
+                  ops as a product: tooling and rituals that help everyone move
+                  faster without lowering the bar.
                 </p>
               </CardContent>
             </Card>
@@ -158,7 +195,9 @@ export function HomePage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-6 py-20 lg:px-8">
-        <p className="text-xs font-semibold uppercase tracking-wider text-primary">Background</p>
+        <p className="text-xs font-semibold tracking-wider text-primary uppercase">
+          Background
+        </p>
         <h2 className="mt-2 font-heading text-2xl font-semibold">Experience</h2>
         <dl className="mt-10">
           {experience.map((item, i) => (
@@ -168,7 +207,9 @@ export function HomePage() {
                 <dt className="text-sm text-muted-foreground">{item.period}</dt>
                 <dd>
                   <p className="font-medium">{item.role}</p>
-                  <p className="mt-1 text-sm text-muted-foreground">{item.detail}</p>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    {item.detail}
+                  </p>
                 </dd>
               </div>
             </div>
@@ -176,7 +217,12 @@ export function HomePage() {
         </dl>
         <p className="mt-8 text-sm text-muted-foreground">
           Full résumé:{" "}
-          <a href={CV_URL} className="font-medium text-primary hover:underline" target="_blank" rel="noopener noreferrer">
+          <a
+            href={CV_URL}
+            className="font-medium text-primary hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             CV in Figma
           </a>
         </p>
@@ -186,8 +232,8 @@ export function HomePage() {
         <div className="mx-auto max-w-6xl px-6 py-16 lg:px-8 lg:py-20">
           <h2 className="font-heading text-2xl font-semibold">Let’s talk</h2>
           <p className="mt-3 max-w-lg text-primary-foreground/85">
-            Portfolio reviews, design system work, or experience operations — I’m happy to walk through any
-            case study in detail.
+            Portfolio reviews, design system work, or experience operations —
+            I’m happy to walk through any case study in detail.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button
@@ -199,7 +245,13 @@ export function HomePage() {
             <Button
               variant="outline"
               className="border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10"
-              render={<a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" />}
+              render={
+                <a
+                  href={LINKEDIN_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                />
+              }
             >
               LinkedIn
             </Button>

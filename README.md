@@ -40,7 +40,6 @@ pnpm dlx shadcn@latest add <component>
 | `src/pages/` | Route pages (home, work, case studies) |
 | `src/components/` | Layout, case-study shells, shadcn UI |
 | `public/images/` | Screenshots and videos |
-| `notion-export.html` | Archived Notion export |
 
 ## DNS (Squarespace)
 
