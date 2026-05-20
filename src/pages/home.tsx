@@ -13,15 +13,15 @@ export function HomePage() {
     <main>
       <section className="border-b border-border bg-muted/30">
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-28">
-          <h1 className="mt-4 max-w-5xl font-heading text-5xl font-semibold tracking-tight sm:text-5xl lg:text-[4rem] lg:leading-[1.15]">
+          <h1 className="max-w-5xl font-heading text-5xl font-semibold tracking-tight sm:text-5xl lg:text-[4rem] lg:leading-[1.15]">
             <span className="text-primary">Frank Grinaert,</span> product
-            designer who turns complex problems into usable solutions
+            designer specialised in enterprise software, design systems, and
+            platform UX
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            Lead product designer specialised in enterprise software, design
-            systems, and platform UX. I work where design meets engineering:
-            code-based systems, cross-functional delivery, and tangible
-            outcomes.
+          <p className="mt-6 max-w-[60ch] text-xl leading-relaxed text-muted-foreground">
+            I work at the intersection of design and engineering: building
+            code-based systems, delivering with cross-functional teams, and
+            driving coherence across complex product portfolios.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <Button size="lg" render={<Link to="/work" />}>
