@@ -1,0 +1,752 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Frank Grinaert</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="31aaade8-bdf6-81a1-a9ac-fcfd94bc18ad" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">✏️</span></div><h1 class="page-title" dir="auto">Frank Grinaert</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><p id="34faade8-bdf6-8072-bb47-f53710e41766" class=""><a href="https://www.figma.com/proto/k8lvoh7nfDJVLTlee81J3e/Frank-Grinaert?page-id=17%3A25&amp;node-id=2102-110&amp;node-type=frame&amp;viewport=-2475%2C240%2C0.34&amp;t=yvzG9LxU0OHfQEhN-8&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;hide-ui=1">CV</a> · <a href="https://www.linkedin.com/in/frankgrinaert/">LinkedIn</a></p></div><div style="display:contents" dir="auto"><p id="34faade8-bdf6-80c6-98c8-e571054b8713" class=""><mark class="highlight-purple_background"><strong>Lead Product Designer</strong></mark><strong> specialised in </strong><mark class="highlight-purple_background"><strong>enterprise software</strong></mark><strong> and </strong><mark class="highlight-purple_background"><strong>design systems</strong></mark><strong>.<br/>Passionate about </strong><mark class="highlight-purple_background"><strong>product development</strong></mark><strong>, devoted to </strong><mark class="highlight-purple_background"><strong>cross-functional collaboration</strong></mark><strong>.</strong></p></div><div style="display:contents" dir="auto"><div id="34faade8-bdf6-800f-871e-c41922d9c196" class="column-list"><div style="display:contents" dir="auto"><div id="34faade8-bdf6-809f-acf3-d0e3c01b2ffa" style="width:50%" class="column"><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-812c-99ee-f78ebedccf71" class=""><strong>💜 I love…</strong></p></div><div style="display:contents" dir="auto"><ul id="31aaade8-bdf6-8124-82c3-fd3f1269c18b" class="bulleted-list"><li style="list-style-type:disc">Working with <strong>passionate people</strong> who are the best at what they do.</li></ul></div><div style="display:contents" dir="auto"><ul id="31aaade8-bdf6-8181-b2b2-f13fafa5de52" class="bulleted-list"><li style="list-style-type:disc">The opportunity to continue <strong>learning and growing</strong>, as a designer and a lead.</li></ul></div></div></div><div style="display:contents" dir="auto"><div id="34faade8-bdf6-8005-9751-cd30d4642662" style="width:50%" class="column"><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-8135-a308-d6854e830a28" class=""><strong>🧭 Values</strong></p></div><div style="display:contents" dir="auto"><ul id="34faade8-bdf6-80ad-9150-ff19090823e5" class="bulleted-list"><li style="list-style-type:disc">Craft</li></ul></div><div style="display:contents" dir="auto"><ul id="34faade8-bdf6-80de-bbd8-f4d4bd14c5f5" class="bulleted-list"><li style="list-style-type:disc">Curiosity</li></ul></div><div style="display:contents" dir="auto"><ul id="34faade8-bdf6-80fc-b87e-e569400bab5b" class="bulleted-list"><li style="list-style-type:disc">Humility</li></ul></div><div style="display:contents" dir="auto"><ul id="34faade8-bdf6-80d8-bc55-ccb0847854b9" class="bulleted-list"><li style="list-style-type:disc">Transparency</li></ul></div></div></div></div></div><div style="display:contents" dir="auto"><p id="34faade8-bdf6-80e5-9279-d6cdf5537875" class="">
+</p></div><div style="display:contents" dir="auto"><hr id="34faade8-bdf6-8069-9bce-d727e2d2fbdd"/></div><div style="display:contents" dir="auto"><h1 id="31aaade8-bdf6-8173-ad07-eb0bf57a1f20" class="">Design system for World Food Programme</h1></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-8174-824b-d8257de69961" class=""><strong>Rebuilt the design system for the UN World Food Programme.</strong></p></div><div style="display:contents" dir="auto"><p id="34faade8-bdf6-80fc-9030-fab50f3894da" class=""><mark class="highlight-gray"><mark class="highlight-default_background">WFP · Design system</mark></mark></p></div><div style="display:contents" dir="auto"><h2 id="31aaade8-bdf6-8138-bbe6-d05e4f2f868a" class=""><strong>Context</strong></h2></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-81bc-a888-de6af87acfec" class="">A careful audit of the existing design system revealed that it did not provide the developer experience required to drive adoption, and technologically wasn’t sufficiently future-proof and maintainable.</p></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-81fa-b589-d5c6c1d80b57" class="">After close deliberation with the Solution Architects team, it was decided to start fresh.</p></div><div style="display:contents" dir="auto"><h2 id="31aaade8-bdf6-815f-b384-f643d5ae0d1e" class="">A new foundation</h2></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-8143-8755-ff3ce4e25e84" class="">Actively in development, since Nov 2025:</p></div><div style="display:contents" dir="ltr"><figure id="34faade8-bdf6-8039-babe-ee105eca7186"><a href="https://designsystem.wfp.org/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">WFP Design System</div><div class="bookmark-description">Digital design system to build consistent, accessible applications for the World Food Programme.</div></div><div class="bookmark-href"><img src="https://designsystem.wfp.org/favicon.ico?favicon.f60f2ec9.ico" class="icon bookmark-icon"/>https://designsystem.wfp.org/</div></div></a></figure></div><div style="display:contents" dir="auto"><div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-81c6-a2ea-d19a55bc64f1" class="">Internal presentation, to socialise the initiative:</p></div></div></div><div style="display:contents" dir="ltr"><figure id="34faade8-bdf6-80d1-920b-c61ccb3b99fe"><div class="source"><a href="https://www.figma.com/proto/XjIDpiEMK667J8VGvrrr9y?scaling=scale-down-width">https://www.figma.com/proto/XjIDpiEMK667J8VGvrrr9y?scaling=scale-down-width</a></div></figure></div><div style="display:contents" dir="auto"><h2 id="34faade8-bdf6-801a-ab22-e329cd8ecc42" class="">Accessible colour system</h2></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-81c3-b504-eefd3ceaa650" class="">Full revision of the colour system, to ensure accessible contrast with ease:</p></div><div style="display:contents" dir="ltr"><figure id="34faade8-bdf6-80ee-97ec-c7a88c46c420"><div class="source"><a href="https://www.figma.com/proto/suBu11QCvNmOqmQiiKEcIl?scaling=scale-down-width">https://www.figma.com/proto/suBu11QCvNmOqmQiiKEcIl?scaling=scale-down-width</a></div></figure></div><div style="display:contents" dir="auto"><hr id="34faade8-bdf6-80c2-b40f-e86bc3b10572"/></div><div style="display:contents" dir="auto"><h1 id="31aaade8-bdf6-818e-b5d1-ddbf4ebb42e7" class="">Design system for Sitecore</h1></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-812d-9ca3-dcef1ea69c3c" class=""><strong>Developed a full new design system, bringing UX consistency and accelerating frontend development across a patchwork of products and teams.</strong></p></div><div style="display:contents" dir="auto"><p id="34faade8-bdf6-8017-9847-d6eab09271b9" class=""><mark class="highlight-gray"><mark class="highlight-default_background">Sitecore · Design system</mark></mark></p></div><div style="display:contents" dir="auto"><p id="34faade8-bdf6-8066-8710-c98ed846ee2a" class="">
+</p></div><div style="display:contents" dir="ltr"><figure id="31aaade8-bdf6-810b-b398-fb8b0b30ac26" class="image"><a href="images/image-20241103-152044.png"><img style="width:700px" src="images/image-20241103-152044.png"/></a><figcaption><a href="https://blok-zeta.vercel.app/">Blok website</a></figcaption></figure></div><div style="display:contents" dir="auto"><h2 id="31aaade8-bdf6-815c-b7d6-d9f5a6133fd2" class="">Context</h2></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-81a2-99c1-c9c4cf489ef2" class="">Following a wave of acquisitions, Sitecore’s product portfolio (and organisation) was a mixed bag of legacy apps, acquired products, and new start-ups.</p></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-816f-8449-e2d179430b7a" class="">We needed a way to create a <strong>cohesive and consistent user experience</strong> across the platform, and <strong>ensure a standard of quality</strong> for <strong>usability</strong>, <strong>accessibility</strong>, and <strong>responsiveness</strong> throughout.</p></div><div style="display:contents" dir="auto"><h2 id="31aaade8-bdf6-8133-87f0-e2eb8ede69f8" class="">Challenges</h2></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-8171-b118-c7b92ffa8e7c" class="">I took ownership of the fledgling <strong>design system</strong> project, which consisted of a rudimentary Figma library and a handful of code components, with no dedicated team to maintain it.</p></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-813a-a9d5-f9decdf0e0b8" class="">Extensive <strong>interviews with developers</strong> showed me they found the existing tools <strong>difficult to use</strong> effectively. They were not actually getting any of the presumed gains in quality or efficiency.</p></div><div style="display:contents" dir="auto"><h2 id="31aaade8-bdf6-8154-832f-e4fac06f837d" class="">Reboot</h2></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-8105-982e-f4c2b268890f" class="">To address the pain points, we needed to <strong>reboot the design system</strong>. I recruited a few passionate dev volunteers from various teams. They helped build the foundation. I then learned enough coding to fill out the rest myself.</p></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-8152-af72-e5b4eec66da6" class="">A few months later, the <strong>new design system was born</strong>, with its very own website:</p></div><div style="display:contents" dir="ltr"><figure id="34faade8-bdf6-80cc-af7a-d9ad6752dd66"><a href="https://blok-zeta.vercel.app/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Blok Design System</div><div class="bookmark-description">Blok is Sitecore’s product design system: the UI framework and style guide we use to build great apps. It’s publicly available, so that anyone can easily build software in the Sitecore product design language.</div></div><div class="bookmark-href"><img src="https://delivery-sitecore.sitecorecontenthub.cloud/api/public/content/favicon-blok?t=favicon192" class="icon bookmark-icon"/>https://blok-zeta.vercel.app/</div></div><img src="https://blok-zeta.vercel.app/Blok!" class="bookmark-image"/></a></figure></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-819c-9b7a-cefff9b610e8" class="">The Blok website served as a <strong>one-stop documentation portal</strong> for all things design system: React components, code samples, design tokens, style guide, coding guidelines, brand assets, Figma libraries, and content writing guidelines—all of which I created from scratch.</p></div><div style="display:contents" dir="auto"><h2 id="31aaade8-bdf6-8121-bb93-c2f7d0c3417f" class="">Launch &amp; evangelisation</h2></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-81c2-ab99-dca52f290719" class="">I launched the new design system through a series of <strong>presentations</strong>, including at the R&amp;D Town Hall, and at a Sitecore user conference:</p></div><div style="display:contents" dir="ltr"><figure id="34faade8-bdf6-80f9-a3da-e9c44798ce1d"><div class="source"><a href="https://youtu.be/0TZIF8FvsNM">https://youtu.be/0TZIF8FvsNM</a></div></figure></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-81ca-be67-c56746b57694" class=""><a href="https://www.figma.com/proto/TKdfHvEfinvG1mdhr7AtpD/Presentations%3A-Design-System?page-id=2055%3A1211&amp;node-id=2055-1273&amp;node-type=canvas&amp;viewport=187%2C427%2C0.09&amp;t=TnL7t7WUKhUJcYDq-8&amp;scaling=scale-down&amp;content-scaling=fixed&amp;hide-ui=1">View slides</a></p></div><div style="display:contents" dir="auto"><h2 id="31aaade8-bdf6-81f8-a1bd-d72c1e51e87e" class="">Roll-out</h2></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-8197-a868-c2a61e543f85" class="">Next began my campaign to <strong>migrate as many products as possible to Blok</strong>. I worked with Product Managers to prioritise adoption and with Engineers to execute it, offering hands-on assistance with code and best practices.</p></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-816e-969c-f2377992174f" class="">Blok has been a <strong>huge success</strong>: it has helped <strong>12+ teams build better experiences more efficiently</strong>, and now functions as a <strong>shared language</strong> between Design &amp; Engineering.</p></div><div style="display:contents" dir="auto"><ul id="31aaade8-bdf6-81aa-ba77-e287a3603461" class="block-color-gray toggle"><li><details open=""><summary>Click to expand: Internal blog post to mark the successful roll-out</summary><div style="display:contents" dir="ltr"><figure id="31aaade8-bdf6-810e-a3fe-fbdb1d60d034" class="image"><a href="images/Blok-one-year-later-Product-Design-Confluence-11-03-2024_04_13_PM.png"><img style="width:700px" src="images/Blok-one-year-later-Product-Design-Confluence-11-03-2024_04_13_PM.png"/></a></figure></div></details></li></ul></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-8120-9a09-ffd1f747a9d2" class="">The response from the dev community was very positive:</p></div><div style="display:contents" dir="auto"><ul id="34faade8-bdf6-808e-81cd-f25840e0adde" class="bulleted-list"><li style="list-style-type:disc">“It&#x27;s cool how quickly you can get results.”</li></ul></div><div style="display:contents" dir="auto"><ul id="34faade8-bdf6-807a-8dfa-ddb891879d99" class="bulleted-list"><li style="list-style-type:disc">“Lot less focus for us on making it look right.”</li></ul></div><div style="display:contents" dir="auto"><ul id="34faade8-bdf6-809c-b053-f19e60e4d42f" class="bulleted-list"><li style="list-style-type:disc">“We can focus more on building functionality and providing value.”</li></ul></div><div style="display:contents" dir="auto"><ul id="34faade8-bdf6-80d2-84f9-f7451ab80556" class="bulleted-list"><li style="list-style-type:disc">“Much cleaner and more maintainable code.”</li></ul></div><div style="display:contents" dir="auto"><ul id="34faade8-bdf6-80aa-9ef7-d25568e9c5ef" class="bulleted-list"><li style="list-style-type:disc">“It saved us tons of time.”</li></ul></div><div style="display:contents" dir="auto"><ul id="34faade8-bdf6-801a-807a-e105983171c6" class="bulleted-list"><li style="list-style-type:disc">“We were able to close a lot of QA tickets.”</li></ul></div><div style="display:contents" dir="auto"><h2 id="31aaade8-bdf6-81df-a752-fec63333dc57" class="">Lessons</h2></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-8193-861b-c4e3cb7ccaf9" class="">This experience had me launch a <strong>zero-to-one project</strong> without resources, by generating internal momentum and attracting contributors. It has taught me that <strong>there is always a way</strong>, and that <strong>relationships are everything</strong>.</p></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-81a8-9e74-d42142bb04ac" class="">It pushed me to learn basic <strong>front-end coding in React</strong> and how to <strong>publish and maintain an NPM package</strong>.</p></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-8191-813d-fe96cc71b8c8" class="">It solidified my belief that <strong>you don’t really have a design system unless you have reusable code.</strong></p></div><div style="display:contents" dir="auto"><hr id="31aaade8-bdf6-8156-9e93-f2bdc0581709"/></div><div style="display:contents" dir="auto"><h1 id="31aaade8-bdf6-816d-ae80-d793e88ce1da" class="">Sitecore unified Cloud Portal &amp; App switcher</h1></div><div style="display:contents" dir="auto"><p id="34faade8-bdf6-80ea-97a9-fd864f878aba" class=""><strong>Designed and  built a single point of entry for the nascent Sitecore DXP platform.</strong></p></div><div style="display:contents" dir="auto"><p id="34faade8-bdf6-80b3-8567-fe46ec2d2a12" class=""><mark class="highlight-gray"><mark class="highlight-default_background">Sitecore · User research · Platform unification</mark></mark></p></div><div style="display:contents" dir="ltr"><figure id="31aaade8-bdf6-8141-bf81-e75ce07ae9f0" class="image"><a href="images/image-20241103-152024.png"><img style="width:700px" src="images/image-20241103-152024.png"/></a><figcaption>Sitecore Cloud Portal homepage</figcaption></figure></div><div style="display:contents" dir="auto"><h2 id="31aaade8-bdf6-8116-a34e-d8bcbe8ec133" class="">Context</h2></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-814a-ade9-dabc1ab6d2ff" class="">Following Sitecore’s many acquisitions, I understood customers would need a <strong>single point of entry</strong> to the fragmented product portfolio, and a way to <strong>easily switch between products</strong>, as is common for multi-product platforms.</p></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-81af-a42b-d812c7eb675c" class="">Slides: <a href="https://www.figma.com/proto/TKdfHvEfinvG1mdhr7AtpD/Presentations%3A-Design-System?page-id=2055%3A4454&amp;node-id=2055-6382&amp;node-type=canvas&amp;viewport=139%2C358%2C0.11&amp;t=pm4zMkXILkcJTvwZ-8&amp;scaling=contain&amp;content-scaling=fixed&amp;hide-ui=1">Sitecore’s design challenge</a></p></div><div style="display:contents" dir="auto"><h2 id="31aaade8-bdf6-8138-9983-d6c83f5b9d3c" class="">Getting the job</h2></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-81ea-9682-cfb0d167ddca" class="">Passionate about unification and branding, I showed Sitecore’s CPO a <a href="https://xd.adobe.com/view/e0049868-f3ea-42c6-8794-59fa8af7f184-b557/screen/392fe56a-aef2-45a9-a10d-c9e37b52d3fa">quick-and-dirty concept for a unified portal &amp; app switcher</a>, and secured the role of Design Lead on the new <strong>Cloud Portal</strong> project.</p></div><div style="display:contents" dir="auto"><h2 id="31aaade8-bdf6-81f0-a85a-c422820bd933" class="">Cloud Portal released</h2></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-81cc-a866-eb760c0067c4" class="">Many beta releases and revisions later, we shipped the Cloud Portal in its current form:</p></div><div style="display:contents" dir="ltr"><figure id="31aaade8-bdf6-8148-9503-e67b231ade3e" class="image"><a href="images/image-20241103-141733.png"><img style="width:700px" src="images/image-20241103-141733.png"/></a><figcaption>Sitecore Cloud Portal (after many revisions)</figcaption></figure></div><div style="display:contents" dir="auto"><h2 id="31aaade8-bdf6-81a5-b58f-ec9f7c391a51" class="">How we got there</h2></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-810f-9c72-e84fe6784a7c" class="">The road to the final design was a rocky one. Due to its many stakeholders and fragmented strategy, the original Cloud Portal had fallen victim to ‘<a href="https://youtu.be/99e6d2purlo?t=300">homepage syndrome</a>’ and was bloated with inconsequential features and content.</p></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-8155-a8a4-c57e0193b805" class="">To illuminate these problems, I ran an early-access <strong>user interview programme</strong>, which showed that users felt overwhelmed and disoriented with the experience.</p></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-818b-ab42-df9195423893" class="">I presented the <strong>research findings and my recommendations</strong> to the team:</p></div><div style="display:contents" dir="ltr"><figure id="34faade8-bdf6-80a1-80ab-f7f78a50baaa"><div class="source"><a href="https://www.figma.com/proto/t0NCQfaEOmsZQrmmjCGZaO?scaling=scale-down-width">https://www.figma.com/proto/t0NCQfaEOmsZQrmmjCGZaO?scaling=scale-down-width</a></div></figure></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-81d5-9b1b-e75cee5349d1" class="">The research secured buy-in from Product Management, and I worked with closely with Engineering to implement the fixes.</p></div><div style="display:contents" dir="auto"><h2 id="31aaade8-bdf6-812e-bd4c-f5585d3e61f0" class="">Lessons</h2></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-8145-bde2-d536085b4671" class="">I learned a lot about <strong>stakeholder management</strong>: how to make<strong> ambiguous requirements tangible</strong> through iterative prototypes, and how to <strong>use data to challenge decisions</strong>.</p></div><div style="display:contents" dir="auto"><p id="34faade8-bdf6-8034-853a-f62898e5ade4" class="">
+</p></div><div style="display:contents" dir="auto"><hr id="31aaade8-bdf6-8135-ba2b-d803b1c76fcd"/></div><div style="display:contents" dir="auto"><h1 id="31aaade8-bdf6-816d-ba14-dc3cdf776e37" class="">Sitecore Cloud Portal mobile optimisation</h1></div><div style="display:contents" dir="auto"><p id="34faade8-bdf6-80ac-952a-d53524037e5e" class=""><strong>Made the Cloud Portal interface usable on mobile.</strong></p></div><div style="display:contents" dir="auto"><p id="34faade8-bdf6-8081-b27a-d9e4917f9182" class=""><mark class="highlight-gray"><mark class="highlight-default_background">Sitecore · Responsive design · UI engineering</mark></mark></p></div><div style="display:contents" dir="auto"><p id="34faade8-bdf6-8098-8987-fb4e2cb66211" class="">
+</p></div><div style="display:contents" dir="ltr"><figure id="31aaade8-bdf6-8139-a0ca-c97dfedb4319" class="image"><a href="images/image-20241103-173627.png"><img style="width:700px" src="images/image-20241103-173627.png"/></a><figcaption>Cloud Portal on mobile</figcaption></figure></div><div style="display:contents" dir="auto"><h2 id="31aaade8-bdf6-8156-a74b-d4110dbefba3" class="">Approach</h2></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-81d4-8b67-caf7f8094486" class="">Rather than solving responsiveness screen by screen, improve it iteratively, in an ‘atomic’ way, i.e. <strong>making components individually responsive</strong>.</p></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-81ce-8705-f7c65b01ad91" class="">This approach increased the reusability of solutions, allowing us to efficiently fix many more screens, across many more products.</p></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-8133-9a55-d049fae09b22" class="">Some examples of design specs, as presented to the dev team:</p></div><div style="display:contents" dir="auto"><h2 id="31aaade8-bdf6-81ed-81e6-f5e9eafadbdf" class="">Example: Homepage layout</h2></div><div style="display:contents" dir="auto"><div id="31aaade8-bdf6-81fe-89e9-f25612b39bc9" class="column-list"><div style="display:contents" dir="auto"><div id="31aaade8-bdf6-81e2-b6ab-f442416a8a0e" style="width:33.33333333333333%" class="column"><div style="display:contents" dir="ltr"><figure id="31aaade8-bdf6-819c-adf2-c833e70df85a" class="image"><a href="images/image-20241103-185248.png"><img style="width:219px" src="images/image-20241103-185248.png"/></a></figure></div></div></div><div style="display:contents" dir="auto"><div id="31aaade8-bdf6-8139-a292-f16d595a6a7b" style="width:33.33333333333333%" class="column"><div style="display:contents" dir="ltr"><figure id="31aaade8-bdf6-81d7-9680-c8d72564ca9a" class="image"><a href="images/image-20241103-184630.png"><img style="width:219px" src="images/image-20241103-184630.png"/></a></figure></div></div></div><div style="display:contents" dir="auto"><div id="31aaade8-bdf6-8168-8cba-f0bb09c9c052" style="width:33.33333333333333%" class="column"><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-8161-90a3-c5c88d6ba30a" class="">
+</p></div></div></div></div></div><div style="display:contents" dir="auto"><h2 id="31aaade8-bdf6-81cd-be07-d87dd92d3a8f" class="">Example: Homepage tiles grid</h2></div><div style="display:contents" dir="auto"><div id="31aaade8-bdf6-8111-9bee-fa6bceb0c3fa" class="column-list"><div style="display:contents" dir="auto"><div id="31aaade8-bdf6-81d4-8377-d152d081bcf6" style="width:33.33333333333333%" class="column"><div style="display:contents" dir="ltr"><figure id="31aaade8-bdf6-81f8-bacd-c482620b869c" class="image"><a href="images/image-20241103-154823.png"><img style="width:219px" src="images/image-20241103-154823.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-8140-850d-fc1cfc352370" class="">
+</p></div></div></div><div style="display:contents" dir="auto"><div id="31aaade8-bdf6-81cc-a919-d76ac1b1ac9f" style="width:33.33333333333333%" class="column"><div style="display:contents" dir="ltr"><figure id="31aaade8-bdf6-8109-baac-c0e77cc7fdca" class="image"><a href="images/image-20241103-185605.png"><img style="width:219px" src="images/image-20241103-185605.png"/></a></figure></div></div></div><div style="display:contents" dir="auto"><div id="31aaade8-bdf6-81fa-b7ca-f553917ae9d8" style="width:33.33333333333333%" class="column"><div style="display:contents" dir="ltr"><figure id="31aaade8-bdf6-81ff-b6c3-dc7de544fffb"><div class="source"><a href="images/Portal_homepage_tiles_20221126.webm">attachment:8811b0d0-b4c3-4ace-8f4b-ec3b2a2dce59:Portal_homepage_tiles_20221126.webm</a></div></figure></div></div></div></div></div><div style="display:contents" dir="auto"><h2 id="31aaade8-bdf6-81bd-9af1-c105ef1230c5" class="">Example: Banner</h2></div><div style="display:contents" dir="auto"><div id="31aaade8-bdf6-818c-b020-e5203d134ef8" class="column-list"><div style="display:contents" dir="auto"><div id="31aaade8-bdf6-8115-8ffa-f69fd94442f1" style="width:33.33333333333333%" class="column"><div style="display:contents" dir="ltr"><figure id="31aaade8-bdf6-8120-9de8-d975a629b1ab" class="image"><a href="images/image-20241103-155712.png"><img style="width:220px" src="images/image-20241103-155712.png"/></a></figure></div></div></div><div style="display:contents" dir="auto"><div id="31aaade8-bdf6-8162-91d5-d146b56dd174" style="width:33.33333333333333%" class="column"><div style="display:contents" dir="ltr"><figure id="31aaade8-bdf6-8167-86d1-fdaf9871fd7b" class="image"><a href="images/image-20241103-155353.png"><img style="width:220px" src="images/image-20241103-155353.png"/></a></figure></div></div></div><div style="display:contents" dir="auto"><div id="31aaade8-bdf6-8147-b220-dc630b42aed9" style="width:33.33333333333333%" class="column"><div style="display:contents" dir="ltr"><figure id="31aaade8-bdf6-81f6-81d2-e89b73cdfb66"><div class="source"><a href="images/Banner_component_-_Responsive_specs.mp4">attachment:9f73d867-cb6b-4782-86fa-e9bcda7b102f:Banner_component_-_Responsive_specs.mp4</a></div></figure></div></div></div></div></div><div style="display:contents" dir="auto"><p id="34faade8-bdf6-800f-a531-dd65adcf8862" class="">
+</p></div><div style="display:contents" dir="auto"><hr id="31aaade8-bdf6-8159-b933-dd036da904c9"/></div><div style="display:contents" dir="auto"><h1 id="31aaade8-bdf6-8133-b354-c447b6e1360c" class="">Revised web layout system</h1></div><div style="display:contents" dir="auto"><p id="34faade8-bdf6-8099-b2c8-eedb6aca13fb" class=""><strong>Designed a new layout system for Sitecore’s site builder application.</strong></p></div><div style="display:contents" dir="auto"><p id="34faade8-bdf6-80cf-8578-ca115e7728e7" class=""><mark class="highlight-gray"><mark class="highlight-default_background">Sitecore · Feature design · Responsive</mark></mark></p></div><div style="display:contents" dir="auto"><h2 id="31aaade8-bdf6-815b-b126-fd1e938163d0" class="">Context</h2></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-81f4-a011-c6e2fa550aa2" class="">The <strong>XMC Pages</strong> application had a very complicated layout system, based on a grid of a configurable number of columns, which was at the same time very complex <em>and</em> quite restrictive (try creating a 5-column section on a 12-column grid). It was also very tedious to build responsive UI.</p></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-81cc-91fb-c6123f9614e0" class="">We needed something simpler, which tried to do <em>less</em>, but <em>better</em>.</p></div><div style="display:contents" dir="auto"><h2 id="31aaade8-bdf6-8158-bbf0-eb21e3bb34c3" class="">Specs</h2></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-8183-a22d-fc41fb1ef4e6" class="">New layout model, as presented to the team:</p></div><div style="display:contents" dir="ltr"><figure id="34faade8-bdf6-808f-b48d-fc55d9b82979"><div class="source"><a href="https://www.figma.com/proto/2sssoMkbk2KReV7swmi94q?node-id=2215-1151&amp;scaling=scale-down-width">https://www.figma.com/proto/2sssoMkbk2KReV7swmi94q?node-id=2215-1151&amp;scaling=scale-down-width</a></div></figure></div><div style="display:contents" dir="auto"><p id="34faade8-bdf6-8072-9ff3-d184f7d6987e" class="">
+</p></div><div style="display:contents" dir="auto"><hr id="34faade8-bdf6-8001-aa3e-e6f0867c3f01"/></div><div style="display:contents" dir="auto"><h1 id="31aaade8-bdf6-8188-bb5b-f07e8d67477a" class="">AI authoring interaction design</h1></div><div style="display:contents" dir="auto"><p id="34faade8-bdf6-809e-b43d-f8c899c731be" class=""><strong>Introduced AI-assisted content authoring features in Sitecore’s headless CMS products.</strong></p></div><div style="display:contents" dir="auto"><p id="34faade8-bdf6-80e8-8d0f-dd7fec85e132" class=""><mark class="highlight-gray"><mark class="highlight-default_background">Sitecore · AI · Feature design</mark></mark></p></div><div style="display:contents" dir="auto"><h2 id="31aaade8-bdf6-8154-a527-cb05ea0096aa" class="">Challenge</h2></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-814f-98e6-fc0cb87f68bd" class="">Bring AI-assisted authoring to the headless content management product.</p></div><div style="display:contents" dir="auto"><h2 id="31aaade8-bdf6-81bf-9846-d964ffe372a8" class="">Prototype</h2></div><div style="display:contents" dir="ltr"><figure id="34faade8-bdf6-805e-a1fc-dc583d5498be"><div class="source"><a href="https://www.figma.com/proto/shnixDWk6C97wPRQ7Ntxog?scaling=scale-down-width&amp;page-id=2215%3A1150">https://www.figma.com/proto/shnixDWk6C97wPRQ7Ntxog?scaling=scale-down-width&amp;page-id=2215%3A1150</a></div></figure></div><div style="display:contents" dir="auto"><hr id="34faade8-bdf6-80f4-9c20-ec208050daa7"/></div><div style="display:contents" dir="auto"><h1 id="31aaade8-bdf6-819c-a32d-f026fa17cc05" class="">AI-first CMP concept</h1></div><div style="display:contents" dir="auto"><p id="34faade8-bdf6-807c-a6b4-f1ab7275b74c" class=""><strong>Conceptual prototype for a new AI-powered content planning and ideation tool.</strong></p></div><div style="display:contents" dir="auto"><p id="34faade8-bdf6-80ac-9887-e8e38465ec17" class=""><mark class="highlight-gray"><mark class="highlight-default_background">Sitecore · AI · Discovery</mark></mark></p></div><div style="display:contents" dir="auto"><h2 id="31aaade8-bdf6-81f5-9d66-e4f55d4d616d" class="">Prototype</h2></div><div style="display:contents" dir="auto"><p id="31aaade8-bdf6-8145-8790-e8bc7657a1b0" class="">Exploratory demo, to facilitate discovery with Product Management:</p></div><div style="display:contents" dir="ltr"><figure id="34faade8-bdf6-800c-9042-e7ae15b1869f"><div class="source"><a href="https://www.figma.com/proto/9a94HJM5ACUh7nurIkICNO?scaling=scale-down-width">https://www.figma.com/proto/9a94HJM5ACUh7nurIkICNO?scaling=scale-down-width</a></div></figure></div><div style="display:contents" dir="auto"><p id="34faade8-bdf6-805a-aca1-f26deba389d2" class="">
+</p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

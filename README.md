@@ -1,54 +1,54 @@
 # frank-ux
 
-Static site for [frank-ux.com](https://frank-ux.com), developed in this repo and served by **GitHub Pages**.
+Portfolio site for [frank-ux.com](https://frank-ux.com), built with **Vite** and **Tailwind CSS**, deployed via **GitHub Actions** to GitHub Pages.
 
 ## Develop locally
 
-Clone the repo, edit files (start with `index.html`), and open the file in a browser, or run a tiny static server from the repo root:
-
 ```bash
-python3 -m http.server 8080
+npm install
+npm run dev
 ```
 
-Then visit `http://localhost:8080`.
+Open the URL Vite prints (usually `http://localhost:5173`).
+
+## Build
+
+```bash
+npm run build
+npm run preview   # optional: preview production build
+```
+
+Output is written to `dist/`.
 
 ## Publish (GitHub Pages)
 
-1. Push this repo to GitHub: [frankgrinaert/frank-ux](https://github.com/frankgrinaert/frank-ux).
-2. On GitHub: **Settings → Pages**.
-3. Under **Build and deployment**:
-   - **Source**: *Deploy from a branch*.
-   - **Branch**: `main` (or your default branch), folder **/** (root).
-4. Under **Custom domain**, enter `frank-ux.com` and save.  
-   Leave **Enforce HTTPS** enabled once DNS has propagated and the certificate is ready.
+1. Push to GitHub: [frankgrinaert/frank-ux](https://github.com/frankgrinaert/frank-ux).
+2. **Settings → Pages → Build and deployment → Source**: select **GitHub Actions**.
+3. The workflow `.github/workflows/deploy.yml` runs on push to `main` or `portfolio` and deploys `dist/`.
+4. **Custom domain**: `frank-ux.com` — configured via `public/CNAME` and Pages settings. Keep **Enforce HTTPS** enabled once DNS is ready.
 
-The `CNAME` file in this repo tells Pages which hostname to use; it should stay in sync with the custom domain you set in Settings.
+## Project structure
+
+| Path | Purpose |
+|------|---------|
+| `index.html` | Homepage |
+| `work/*.html` | Case study pages |
+| `src/` | Shared CSS, layout, email obfuscation |
+| `public/images/` | Screenshots and videos |
+| `notion-export.html` | Archived Notion export (reference only) |
 
 ## DNS (Squarespace)
 
-Squarespace: **Domains** → your domain → **DNS settings** (or use linked DNS / advanced DNS, depending on your Squarespace UI).
-
-Point the domain at GitHub Pages:
-
-| Type | Host / Name | Data / Value |
-|------|-------------|----------------|
+| Type | Host | Value |
+|------|------|--------|
 | **A** | `@` | `185.199.108.153` |
 | **A** | `@` | `185.199.109.153` |
 | **A** | `@` | `185.199.110.153` |
 | **A** | `@` | `185.199.111.153` |
-
-Optional **www**:
-
-| Type | Host / Name | Data / Value |
-|------|-------------|----------------|
 | **CNAME** | `www` | `frankgrinaert.github.io` |
 
-If Squarespace already has conflicting **A** or **CNAME** records for `@` or `www`, remove or adjust them so only the records above apply for GitHub.
+Latest GitHub Pages IP addresses: [GitHub Docs — custom domain](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
 
-DNS can take up to 48 hours (often much less). GitHub’s **Pages** settings will show when the domain is verified.
+## Adding images
 
-## Repo URL vs site URL
-
-After setup, the project Pages URL `https://frankgrinaert.github.io/frank-ux/` may still work, but your canonical site is **https://frank-ux.com** once the custom domain is active.
-
-If GitHub’s documented IPs change, use the latest values from [GitHub Pages: Configuring a custom domain](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
+Place assets in `public/images/` and reference them as `/images/your-file.png` in HTML.

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Rebuilding the World Food Programme design system — business case, adoption, and code-first delivery." />
+    <title>WFP Design System — Frank Grinaert</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <div id="site-header"></div>
+
+    <main>
+      <article class="border-b border-zinc-200 bg-surface">
+        <div class="mx-auto max-w-content px-6 py-12 lg:px-8 lg:py-16">
+          <a href="/work/" class="text-sm font-medium text-zinc-500 hover:text-indigo-600">← All work</a>
+          <p class="section-label mt-8">Case study</p>
+          <h1 class="mt-2 max-w-3xl text-3xl font-semibold tracking-tight text-zinc-900 sm:text-4xl">
+            WFP Design System
+          </h1>
+          <p class="mt-4 max-w-2xl text-lg text-zinc-600">
+            Rebuilt the UN World Food Programme’s corporate design system so dozens of IT solutions can ship consistent, accessible UI — with a developer experience that actually drives adoption.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="tag">World Food Programme</span>
+            <span class="tag">Design system</span>
+            <span class="tag">Design engineering</span>
+            <span class="tag-accent">2025–present</span>
+          </div>
+        </div>
+      </article>
+
+      <div class="mx-auto max-w-prose px-6 py-12 lg:px-8 lg:py-16 prose-portfolio">
+        <p class="section-label">1 · Business problem</p>
+        <h2>Why this project exists</h2>
+        <p>
+          WFP operates a large portfolio of internal IT solutions — each with its own interfaces, teams, and delivery pressure. Without a design system that teams <em>want</em> to use, every product reinvents UI, accessibility suffers, and engineering time disappears into one-off styling.
+        </p>
+        <p>
+          The previous system failed the adoption test: audits showed it did not give developers the experience they needed, and the technology stack was not maintainable or future-proof enough for where WFP’s architecture is heading — including AI-assisted workflows.
+        </p>
+        <p>
+          The business stake is straightforward: <strong>one credible foundation for UX quality and delivery speed across the IT portfolio</strong>, not another Figma library that only designers see.
+        </p>
+
+        <div class="evidence-card not-prose mt-8 grid gap-6 sm:grid-cols-2">
+          <div>
+            <dt>What success looks like</dt>
+            <dd>Interface designers and front-end developers default to the system; product managers can find guidance without chasing designers.</dd>
+          </div>
+          <div>
+            <dt>My role</dt>
+            <dd>Design System Lead — evolution of the system, UX coordination across solutions, DesignersHub community, mentoring.</dd>
+          </div>
+        </div>
+
+        <p class="section-label mt-12">2 · Product gap</p>
+        <h2>What was broken before design</h2>
+        <p>
+          Developers could not adopt the old system efficiently. Documentation and components did not match how teams build today. Solution Architects and I aligned on a hard call: <strong>start fresh</strong> rather than patch a foundation that would keep leaking time.
+        </p>
+        <p>
+          The product gap was both <strong>experience</strong> (hard to use, inconsistent outcomes) and <strong>platform</strong> (not ready for code-first, AI-ready delivery).
+        </p>
+
+        <p class="section-label mt-12">3 · Approach</p>
+        <h2>Code-first, AI-ready foundation</h2>
+        <p>
+          Since late 2025 I have been leading development of a new system — documented publicly at
+          <a href="https://designsystem.wfp.org/" target="_blank" rel="noopener noreferrer">designsystem.wfp.org</a>
+          — with accessible patterns, tokens, and components aimed at real implementation, not slide decks.
+        </p>
+        <p>Parallel work streams include:</p>
+        <ul>
+          <li>Partnering with Solution Architects on technical direction</li>
+          <li>Full revision of the colour system for accessible contrast by default</li>
+          <li>Internal socialisation — aligning product, design, and engineering communities on why the reboot matters</li>
+          <li>DesignersHub — a community space for design ops, feedback, and showcasing work across WFP</li>
+        </ul>
+
+        <figure>
+          <a href="https://designsystem.wfp.org/" target="_blank" rel="noopener noreferrer" class="block rounded-lg border border-zinc-200 bg-zinc-50 p-8 text-center hover:border-indigo-200">
+            <span class="text-sm font-medium text-indigo-600">designsystem.wfp.org →</span>
+            <p class="mt-2 text-xs text-zinc-500">Live documentation (actively in development)</p>
+          </a>
+          <figcaption>WFP Design System — public documentation site</figcaption>
+        </figure>
+
+        <h3>Accessible colour system</h3>
+        <p>
+          Rebuilt colour semantics so teams can meet contrast requirements without one-off fixes — reducing QA churn and accessibility risk at scale.
+        </p>
+        <p>
+          <a href="https://www.figma.com/proto/suBu11QCvNmOqmQiiKEcIl?scaling=scale-down-width" target="_blank" rel="noopener noreferrer">Colour system prototype (Figma) →</a>
+        </p>
+
+        <h3>Internal alignment</h3>
+        <p>
+          <a href="https://www.figma.com/proto/XjIDpiEMK667J8VGvrrr9y?scaling=scale-down-width" target="_blank" rel="noopener noreferrer">Initiative presentation (Figma) →</a>
+          — used to socialise the programme with stakeholders inside WFP.
+        </p>
+
+        <p class="section-label mt-12">4 · Outcomes</p>
+        <h2>Evidence so far</h2>
+        <p>
+          This programme is in active delivery. The outcome metric I am optimising for is the same one I used at Sitecore: <strong>number of products and teams actually building on the system</strong>, plus observable acceleration of product development once components and docs are trusted.
+        </p>
+        <div class="evidence-card not-prose mt-6 space-y-4">
+          <div>
+            <dt>Adoption (in progress)</dt>
+            <dd>Rolling the system across WFP’s IT solution portfolio — designers and developers held to shared guidelines and UX practice.</dd>
+          </div>
+          <div>
+            <dt>Velocity</dt>
+            <dd>Goal state: less bespoke UI work per release, faster path from spec to accessible production UI.</dd>
+          </div>
+          <div>
+            <dt>Organisational</dt>
+            <dd>DesignersHub and cross-team rituals to keep design ops visible — not a side project in a single squad.</dd>
+          </div>
+        </div>
+
+        <p class="section-label mt-12">5 · Reflection</p>
+        <h2>Design engineering at humanitarian scale</h2>
+        <p>
+          The lesson from Sitecore still applies: <strong>you do not have a design system unless you have reusable code and documentation developers trust.</strong> At WFP the stakes are different — public mission, global teams — but the operating model is the same: stay close to architects, ship incrementally, measure adoption not deliverables.
+        </p>
+      </div>
+
+      <nav class="mx-auto max-w-content border-t border-zinc-200 px-6 py-12 lg:px-8">
+        <p class="text-sm font-medium text-zinc-500">Next case study</p>
+        <a href="/work/blok.html" class="mt-2 inline-block text-lg font-semibold text-indigo-600 hover:text-indigo-800">Blok @ Sitecore →</a>
+      </nav>
+    </main>
+
+    <div id="site-footer"></div>
+  </body>
+</html>
