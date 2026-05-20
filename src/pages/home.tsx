@@ -18,15 +18,12 @@ export function HomePage() {
             designer who turns complex problems into usable solutions
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            Lead product designer specialised in enterprise software, design
-            systems, and platform UX. I work where design meets engineering:
-            code-based systems, cross-functional delivery, and tangible
-            outcomes.
+            I specialise in enterprise software, design systems, and platform
+            UX. I work at the intersection of design and engineering — building
+            code-based systems, delivering with cross-functional teams, and
+            driving coherence across complex product portfolios.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
-            <Button size="lg" render={<Link to="/work" />}>
-              View work
-            </Button>
             <Button
               size="lg"
               variant="outline"
