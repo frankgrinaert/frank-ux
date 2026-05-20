@@ -1,12 +1,12 @@
 # frank-ux
 
-Portfolio site for [frank-ux.com](https://frank-ux.com), built with **Vite** and **Tailwind CSS**, deployed via **GitHub Actions** to GitHub Pages.
+Portfolio site for [frank-ux.com](https://frank-ux.com) — **Vite**, **React**, **shadcn/ui**, and **Tailwind CSS v4**, deployed via GitHub Actions to GitHub Pages.
 
 ## Develop locally
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
 Open the URL Vite prints (usually `http://localhost:5173`).
@@ -14,28 +14,33 @@ Open the URL Vite prints (usually `http://localhost:5173`).
 ## Build
 
 ```bash
-npm run build
-npm run preview   # optional: preview production build
+pnpm build
+pnpm preview
 ```
 
-Output is written to `dist/`.
+Output is written to `dist/`. The build also copies `index.html` to `404.html` for SPA routing on GitHub Pages.
+
+## Add shadcn components
+
+```bash
+pnpm dlx shadcn@latest add <component>
+```
 
 ## Publish (GitHub Pages)
 
 1. Push to GitHub: [frankgrinaert/frank-ux](https://github.com/frankgrinaert/frank-ux).
-2. **Settings → Pages → Build and deployment → Source**: select **GitHub Actions**.
-3. The workflow `.github/workflows/deploy.yml` runs on push to `main` or `portfolio` and deploys `dist/`.
-4. **Custom domain**: `frank-ux.com` — configured via `public/CNAME` and Pages settings. Keep **Enforce HTTPS** enabled once DNS is ready.
+2. **Settings → Pages → Build and deployment → Source**: **GitHub Actions**.
+3. Workflow `.github/workflows/deploy.yml` runs on push to `main` or `portfolio`.
+4. Custom domain `frank-ux.com` via `public/CNAME`.
 
 ## Project structure
 
 | Path | Purpose |
 |------|---------|
-| `index.html` | Homepage |
-| `work/*.html` | Case study pages |
-| `src/` | Shared CSS, layout, email obfuscation |
+| `src/pages/` | Route pages (home, work, case studies) |
+| `src/components/` | Layout, case-study shells, shadcn UI |
 | `public/images/` | Screenshots and videos |
-| `notion-export.html` | Archived Notion export (reference only) |
+| `notion-export.html` | Archived Notion export |
 
 ## DNS (Squarespace)
 
@@ -46,9 +51,3 @@ Output is written to `dist/`.
 | **A** | `@` | `185.199.110.153` |
 | **A** | `@` | `185.199.111.153` |
 | **CNAME** | `www` | `frankgrinaert.github.io` |
-
-Latest GitHub Pages IP addresses: [GitHub Docs — custom domain](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
-
-## Adding images
-
-Place assets in `public/images/` and reference them as `/images/your-file.png` in HTML.
