@@ -18,11 +18,11 @@ export function HomePage() {
   return (
     <main className="min-h-svh bg-muted">
       <section className="mx-auto flex min-h-svh max-w-6xl flex-col justify-center px-6 py-20 lg:px-8 lg:py-28">
-        <h1 className="max-w-5xl font-heading text-5xl font-semibold tracking-tight sm:text-5xl lg:text-[4rem] lg:leading-[1.15]">
+        <h1 className="max-w-5xl font-heading text-3xl font-semibold sm:text-4xl lg:text-5xl">
           <span className="text-primary">Frank Grinaert,</span> product designer
           specialised in enterprise software, design systems, and platform UX
         </h1>
-        <p className="mt-6 max-w-[60ch] text-xl leading-relaxed text-muted-foreground">
+        <p className="mt-6 max-w-[60ch] text-base leading-relaxed text-muted-foreground sm:text-lg lg:text-xl">
           I work at the intersection of design and engineering: building
           code-based systems, delivering with cross-functional teams, and
           driving coherence across complex product portfolios.
