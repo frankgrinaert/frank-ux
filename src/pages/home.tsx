@@ -13,11 +13,8 @@ export function HomePage() {
     <main>
       <section className="border-b border-border bg-muted/30">
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-28">
-          <p className="text-xs font-semibold tracking-wider text-primary uppercase">
-            Product design · Design engineering
-          </p>
-          <h1 className="mt-4 max-w-3xl font-heading text-5xl font-semibold tracking-tight sm:text-5xl lg:text-[3.25rem] lg:leading-[1.15]">
-            <span className="text-primary">Frank Grinaert,</span> Product
+          <h1 className="mt-4 max-w-5xl font-heading text-5xl font-semibold tracking-tight sm:text-5xl lg:text-[4rem] lg:leading-[1.15]">
+            <span className="text-primary">Frank Grinaert,</span> product
             designer who turns complex problems into usable solutions
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
@@ -27,8 +24,11 @@ export function HomePage() {
             outcomes.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
-            <Button render={<Link to="/work" />}>View work</Button>
+            <Button size="lg" render={<Link to="/work" />}>
+              View work
+            </Button>
             <Button
+              size="lg"
               variant="outline"
               render={
                 <a href={CV_URL} target="_blank" rel="noopener noreferrer" />
@@ -37,6 +37,7 @@ export function HomePage() {
               CV
             </Button>
             <Button
+              size="lg"
               variant="outline"
               render={
                 <a
@@ -48,7 +49,11 @@ export function HomePage() {
             >
               LinkedIn
             </Button>
-            <Button variant="outline" render={<a href={`mailto:${email}`} />}>
+            <Button
+              size="lg"
+              variant="outline"
+              render={<a href={`mailto:${email}`} />}
+            >
               Email
             </Button>
           </div>
