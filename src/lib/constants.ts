@@ -9,3 +9,6 @@ export const SITE_TAGLINE =
   "Lead product designer in the design-engineering space — design systems, platform UX, and shipping work teams actually use."
 
 export const BLOK_PATH = "/work/blok"
+
+export const WFP_COLOUR_SYSTEM_URL =
+  "https://www.figma.com/proto/suBu11QCvNmOqmQiiKEcIl?scaling=scale-down-width&hide-ui"

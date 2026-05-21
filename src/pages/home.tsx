@@ -9,18 +9,100 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { ArrowRight } from "lucide-react"
-import { BLOK_PATH } from "@/lib/constants"
+import { ArrowRight, ExternalLink } from "lucide-react"
+import { BLOK_PATH, WFP_COLOUR_SYSTEM_URL } from "@/lib/constants"
 
-const BLOK_WORK = {
-  path: BLOK_PATH,
-  title: "Design system for Sitecore",
-  summary:
-    "After 6 acquisitions, Sitecore’s portfolio was fragmented. Blok became the shared foundation adopted by 12+ product teams, to ship faster with better UX.",
-  image: "/work/blok/blok-site.png",
-  imageAlt: "Blok design system — documentation site and component library",
-  tags: ["Design systems", "Enterprise UX", "Platform"],
-} as const
+type WorkItem = {
+  title: string
+  summary: string
+  href: string
+  image: string
+  imageAlt: string
+  external?: boolean
+  tags?: readonly string[]
+}
+
+const WORK_ITEMS: WorkItem[] = [
+  {
+    href: BLOK_PATH,
+    title: "Design system for Sitecore",
+    summary:
+      "After 6 acquisitions, Sitecore’s portfolio was fragmented. Blok became the shared foundation adopted by 12+ product teams, to ship faster with better UX.",
+    image: "/work/blok/blok-site.png",
+    imageAlt: "Blok design system — documentation site and component library",
+    tags: ["Design systems", "Enterprise UX", "Platform"],
+  },
+  {
+    href: WFP_COLOUR_SYSTEM_URL,
+    external: true,
+    title: "Accessible colour system",
+    summary:
+      "Full revision of WFP’s colour system, to ensure accessible contrast with ease.",
+    image: "/work/wfp-ds-a11y.png",
+    imageAlt: "WFP design system — accessibility",
+    tags: ["Design systems", "Accessibility"],
+  },
+]
+
+const workCardClassName =
+  "group block rounded-4xl outline-none focus-visible:ring-3 focus-visible:ring-ring/30"
+
+function WorkCard({ item }: { item: WorkItem }) {
+  const card = (
+    <Card className="h-full transition-shadow group-hover:shadow-lg">
+      <img
+        src={item.image}
+        alt={item.imageAlt}
+        className="aspect-video w-full object-cover object-top"
+      />
+      <CardHeader>
+        <CardTitle className="text-lg font-semibold sm:text-xl">
+          {item.title}
+        </CardTitle>
+        <CardDescription className="text-base leading-relaxed">
+          {item.summary}
+        </CardDescription>
+        <CardAction>
+          {item.external ? (
+            <ExternalLink className="size-5 text-muted-foreground" />
+          ) : (
+            <ArrowRight className="size-5 text-muted-foreground transition-transform group-hover:translate-x-0.5" />
+          )}
+        </CardAction>
+      </CardHeader>
+      {item.tags && item.tags.length > 0 ? (
+        <CardContent>
+          <ul className="flex flex-wrap gap-2">
+            {item.tags.map((tag) => (
+              <li key={tag}>
+                <Badge variant="secondary">{tag}</Badge>
+              </li>
+            ))}
+          </ul>
+        </CardContent>
+      ) : null}
+    </Card>
+  )
+
+  if (item.external) {
+    return (
+      <a
+        href={item.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={workCardClassName}
+      >
+        {card}
+      </a>
+    )
+  }
+
+  return (
+    <Link to={item.href} className={workCardClassName}>
+      {card}
+    </Link>
+  )
+}
 
 export function HomePage() {
   return (
@@ -49,40 +131,11 @@ export function HomePage() {
             Work
           </h2>
           <ul className="mt-8 grid gap-6 sm:grid-cols-2">
-            <li>
-              <Link
-                to={BLOK_WORK.path}
-                className="group block rounded-4xl outline-none focus-visible:ring-3 focus-visible:ring-ring/30"
-              >
-                <Card className="h-full transition-shadow group-hover:shadow-lg">
-                  <img
-                    src={BLOK_WORK.image}
-                    alt={BLOK_WORK.imageAlt}
-                    className="aspect-video w-full object-cover object-top"
-                  />
-                  <CardHeader>
-                    <CardTitle className="text-lg sm:text-xl">
-                      {BLOK_WORK.title}
-                    </CardTitle>
-                    <CardDescription className="text-base leading-relaxed">
-                      {BLOK_WORK.summary}
-                    </CardDescription>
-                    <CardAction>
-                      <ArrowRight className="size-5 text-muted-foreground transition-transform group-hover:translate-x-0.5" />
-                    </CardAction>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="flex flex-wrap gap-2">
-                      {BLOK_WORK.tags.map((tag) => (
-                        <li key={tag}>
-                          <Badge variant="secondary">{tag}</Badge>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              </Link>
-            </li>
+            {WORK_ITEMS.map((item) => (
+              <li key={item.href}>
+                <WorkCard item={item} />
+              </li>
+            ))}
           </ul>
         </div>
       </section>
