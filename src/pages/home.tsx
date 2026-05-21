@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Check, ExternalLink, Mail } from "lucide-react"
-import { CASE_1_PATH, CV_URL, LINKEDIN_URL } from "@/lib/constants"
+import { BLOK_PATH, CV_URL, LINKEDIN_URL } from "@/lib/constants"
 import { copyEmailAddress } from "@/lib/email"
 
 export function HomePage() {
@@ -60,9 +60,9 @@ export function HomePage() {
           <Button
             size="lg"
             variant="default"
-            render={<Link to={CASE_1_PATH} />}
+            render={<Link to={BLOK_PATH} />}
           >
-            Case 1
+            Blok
             <ArrowRight />
           </Button>
         </div>

@@ -35,19 +35,20 @@ pnpm dlx shadcn@latest add <component>
 
 ## Case studies (MDX)
 
-Each case lives in `src/content/cases/<slug>.mdx`. YAML frontmatter holds `slug`, `title`, `summary`, and `tags` (exported as `meta`). Structure the body with:
+Each case lives in `src/content/work/<slug>.mdx`. YAML frontmatter holds `slug`, `title`, `summary`, and `tags` (exported as `meta`). Structure the body with:
 
 - `<CaseSection id="context">` (and `problem`, `approach`, `outcome`, `reflections`)
 - `<CaseSubsection title="…">` — write Markdown inside; add React components such as `<FigmaEmbed src="…" />` for Figma prototypes
 
-Wire a new case by adding the `.mdx` file, re-exporting it from `src/pages/cases/`, and adding a route in `App.tsx`.
+Wire a new case by adding the `.mdx` file, re-exporting it from `src/pages/work/`, and adding a route in `App.tsx` (e.g. `/work/<slug>`).
 
 ## Project structure
 
 | Path | Purpose |
 |------|---------|
 | `src/pages/home.tsx` | Homepage |
-| `src/content/cases/*.mdx` | Case study copy (MDX + YAML frontmatter) |
+| `src/content/work/*.mdx` | Case study copy (MDX + YAML frontmatter) |
+| `public/work/<slug>/` | Case study images and other static assets |
 | `src/components/ui/` | shadcn UI used on the homepage |
 | `public/CNAME` | Custom domain for GitHub Pages |
 
