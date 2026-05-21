@@ -1,5 +1,3 @@
-import type { ReactNode } from "react"
-
 export const CASE_SECTION_TITLES = {
   context: "Context",
   problem: "Problem",
@@ -10,20 +8,9 @@ export const CASE_SECTION_TITLES = {
 
 export type CaseSectionId = keyof typeof CASE_SECTION_TITLES
 
-export type CaseSubsection = {
-  subtitle: string
-  content: ReactNode
-}
-
-export type CaseSection = {
-  id: CaseSectionId
-  subsections: CaseSubsection[]
-}
-
-export type CaseStudy = {
+export type CaseStudyMeta = {
   slug: string
   title: string
   summary: string
   tags: string[]
-  sections: CaseSection[]
 }

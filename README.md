@@ -33,11 +33,21 @@ pnpm dlx shadcn@latest add <component>
 3. Workflow `.github/workflows/deploy.yml` runs on push to `main` or `portfolio`.
 4. Custom domain `frank-ux.com` via `public/CNAME`.
 
+## Case studies (MDX)
+
+Each case lives in `src/content/cases/<slug>.mdx`. YAML frontmatter holds `slug`, `title`, `summary`, and `tags` (exported as `meta`). Structure the body with:
+
+- `<CaseSection id="context">` (and `problem`, `approach`, `outcome`, `reflections`)
+- `<CaseSubsection title="…">` — write Markdown inside; add React components such as `<FigmaEmbed src="…" />` for Figma prototypes
+
+Wire a new case by adding the `.mdx` file, re-exporting it from `src/pages/cases/`, and adding a route in `App.tsx`.
+
 ## Project structure
 
 | Path | Purpose |
 |------|---------|
 | `src/pages/home.tsx` | Homepage |
+| `src/content/cases/*.mdx` | Case study copy (MDX + YAML frontmatter) |
 | `src/components/ui/` | shadcn UI used on the homepage |
 | `public/CNAME` | Custom domain for GitHub Pages |
 

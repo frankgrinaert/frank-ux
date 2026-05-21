@@ -3,9 +3,9 @@ import { Link } from "react-router-dom"
 
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import type { CaseStudy } from "@/lib/case-study"
+import type { CaseStudyMeta } from "@/lib/case-study"
 
-type CaseHeaderProps = Pick<CaseStudy, "title" | "summary" | "tags">
+type CaseHeaderProps = Pick<CaseStudyMeta, "title" | "summary" | "tags">
 
 export function CaseHeader({ title, summary, tags }: CaseHeaderProps) {
   return (
