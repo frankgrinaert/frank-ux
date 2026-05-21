@@ -62,13 +62,6 @@ function WorkCard({ item }: { item: WorkItem }) {
         <CardDescription className="text-base leading-relaxed">
           {item.summary}
         </CardDescription>
-        <CardAction>
-          {item.external ? (
-            <ExternalLink className="size-5 text-muted-foreground" />
-          ) : (
-            <ArrowRight className="size-5 text-muted-foreground transition-transform group-hover:translate-x-0.5" />
-          )}
-        </CardAction>
       </CardHeader>
       {item.tags && item.tags.length > 0 ? (
         <CardContent>
