@@ -1,8 +1,9 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 import { Button } from "@/components/ui/button"
-import { Check, ExternalLink, Mail } from "lucide-react"
-import { CV_URL, LINKEDIN_URL } from "@/lib/constants"
+import { ArrowRight, Check, ExternalLink, Mail } from "lucide-react"
+import { CASE_1_PATH, CV_URL, LINKEDIN_URL } from "@/lib/constants"
 import { copyEmailAddress } from "@/lib/email"
 
 export function HomePage() {
@@ -55,6 +56,14 @@ export function HomePage() {
           <Button size="lg" variant="outline" onClick={handleCopyEmail}>
             {emailCopied ? <Check /> : <Mail />}
             {emailCopied ? "Email copied to clipboard" : "Email"}
+          </Button>
+          <Button
+            size="lg"
+            variant="default"
+            render={<Link to={CASE_1_PATH} />}
+          >
+            Case 1
+            <ArrowRight />
           </Button>
         </div>
       </section>

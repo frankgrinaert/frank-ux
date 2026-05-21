@@ -7,3 +7,5 @@ export const SITE_NAME = "Frank Grinaert"
 
 export const SITE_TAGLINE =
   "Lead product designer in the design-engineering space — design systems, platform UX, and shipping work teams actually use."
+
+export const CASE_1_PATH = "/cases/case-1"
