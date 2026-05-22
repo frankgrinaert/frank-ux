@@ -14,22 +14,25 @@ tags:
   href="https://designsystem.wfp.org/"
   target="_blank"
   rel="noopener noreferrer"
-  aria-label="Open WFP Design System site (opens in new tab)"
-  className="block rounded-lg border border-border bg-muted/50 p-10 text-center transition-colors hover:border-primary/30"
+  aria-label="WFP Design System site (opens in new tab)"
+  className="block"
 >
-  <span className="text-base font-medium text-primary">designsystem.wfp.org</span>
-  <p className="mt-2 text-sm text-muted-foreground">
-    Live documentation — actively in development since late 2025
-  </p>
+  <img
+    src="/work/wfp-ds-site.png"
+    alt="WFP Design System site"
+    className="w-full"
+  />
 </a>
 
 <CaseSection id="context">
 
 <CaseSubsection title="UX at humanitarian scale">
 
-The World Food Programme runs a large portfolio of internal IT solutions — humanitarian operations, logistics, finance, and more. Most are built and maintained by **external development partners**, with limited central UX oversight.
+The World Food Programme runs a **large portfolio of internal IT solutions**. Most are built and maintained by **external development partners**, with limited central UX oversight.
 
-Without a design system teams actually use, every product reinvents interface patterns. Accessibility drifts, QA churn grows, and engineering time disappears into one-off styling. The business stake is simple: **one credible foundation for quality and delivery speed across the IT portfolio** — not another Figma library designers alone maintain.
+Without a design system teams actually use, every product reinvents interface patterns. Accessibility drifts, QA churn grows, and engineering time disappears into one-off styling.
+
+The business stake is simple: **one credible foundation for quality and speed of delivery across the IT portfolio**.
 
 </CaseSubsection>
 
@@ -39,9 +42,11 @@ Without a design system teams actually use, every product reinvents interface pa
 
 <CaseSubsection title="A system that worked against delivery">
 
-Audits with Solution Architects were clear: the legacy design system was outdated, buried in tech debt, and painful to use and maintain. There was **no dedicated team** to evolve it.
+The legacy design system was outdated, buried in tech debt, and painful to use and maintain. Worse: there was **no dedicated team** to evolve it.
 
-Developers worked around it — hacks, duplicated components, slow releases. Accessibility was inconsistent. The product gap was both **experience** (low adoption, unreliable UI) and **platform** (not maintainable or ready for how WFP wants to build next, including AI-assisted workflows).
+Developers worked around it; hacks, duplicated components, slow releases.
+
+Accessibility was inconsistent.
 
 </CaseSubsection>
 
@@ -51,9 +56,31 @@ Developers worked around it — hacks, duplicated components, slow releases. Acc
 
 <CaseSubsection title="Make the case to start fresh">
 
-I led a formal audit and an internal presentation to spell out the cost of staying on the old foundation. Together with architects, we benchmarked modern frontend approaches and agreed: **reboot**, not incremental patch.
+I led a formal audit and an internal presentation to spell out the cost of staying on the old foundation. Together with architects, I benchmarked modern frontend approaches and agreed: **reboot**, not incremental patch.
 
-Workshops across design, product, and engineering crowdsourced requirements and built buy-in. I hired a frontend engineer and led a **zero-to-one** programme — a new code-first foundation shipped in roughly **two months**.
+</CaseSubsection>
+
+<CaseSubsection title="Zero to one">
+
+I hired a frontend engineer and led a **zero-to-one** programme: a new code-first foundation shipped in roughly **two months**.
+
+The new system lives at <a href="https://designsystem.wfp.org/" target="_blank" rel="noopener noreferrer">designsystem.wfp.org</a>:
+
+<a
+  href="https://designsystem.wfp.org/"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="WFP Design System site (opens in new tab)"
+  className="block"
+>
+  <img
+    src="/work/wfp-ds-site.png"
+    alt="WFP Design System site"
+    className="w-full"
+  />
+</a>
+
+Internal introduction deck:
 
 <FigmaEmbed
   src="https://www.figma.com/proto/XjIDpiEMK667J8VGvrrr9y?scaling=scale-down-width"
@@ -66,9 +93,15 @@ Workshops across design, product, and engineering crowdsourced requirements and 
 
 The new system lives at <a href="https://designsystem.wfp.org/" target="_blank" rel="noopener noreferrer">designsystem.wfp.org</a>: tokens, components, and documentation aimed at implementation in vendor codebases, not slide decks.
 
-Early stream: a full revision of colour semantics so teams hit contrast requirements by default — documented in the <a href="https://www.figma.com/proto/suBu11QCvNmOqmQiiKEcIl?scaling=scale-down-width&hide-ui=1" target="_blank" rel="noopener noreferrer">Accessible colour system</a> prototype.
-
 I evangelise internally, support pilot teams through migration, and keep architects aligned on an **AI-ready** stack — structured for AI-assisted development and, eventually, code prototypes from UX and Product without a full engineering loop.
+
+</CaseSubsection>
+
+<CaseSubsection title="Accessible by default">
+
+Early stream: a full revision of colour semantics so teams hit contrast requirements by default.
+
+<WorkCardEmbed id="accessible-colour-system" />
 
 </CaseSubsection>
 
@@ -76,15 +109,21 @@ I evangelise internally, support pilot teams through migration, and keep archite
 
 <CaseSection id="outcome">
 
-<CaseSubsection title="Rolling out (in progress)">
+<CaseSubsection title="Roll-out in progress">
 
 This programme started a few months ago; adoption metrics are still forming. What is already true:
 
-**Portfolio:** Legacy solutions have a credible path to modernise frontends instead of perpetuating bespoke UI.
+</CaseSubsection>
 
-**Platform:** A shared, accessible foundation pilots across IT products — the metric I care about is **teams actually building on the system**, not deliverable count.
+<CaseSubsection title="Future-proof tech">
 
-**Forward look:** An AI-ready design system so assisted development — and later, designer- or PM-led prototypes — sit on the same components production uses.
+Legacy solutions have a credible path to modernise frontends instead of perpetuating technical and design debt.
+
+</CaseSubsection>
+
+<CaseSubsection title="AI enablement">
+
+The design system is ideally suited to AI-assisted development. This can reduce dependency on Engineering, by enabling non-engineers to build interfaces autonomously.
 
 </CaseSubsection>
 
@@ -94,9 +133,9 @@ This programme started a few months ago; adoption metrics are still forming. Wha
 
 <CaseSubsection title="Read the room">
 
-I underestimated sensitivities around the old system — sunk-cost attachment and pride in work that had clearly stopped scaling. I moved fast, delivered the new foundation in record time, and got the technical outcome. I also **strained relationships** by bulldozing past resistance instead of bringing more people along earlier.
+I underestimated sensitivities around the old system; sunk-cost attachment and pride in work that had clearly stopped scaling. I moved fast, delivered the new foundation in record time, and got the technical outcome. I also strained relationships by bulldozing past resistance instead of bringing more people along earlier.
 
-The lesson parallels <a href="/work/blok">Blok</a>: you do not have a design system without reusable code developers trust — but at WFP I am learning that **how** you retire the old one matters as much as **what** you ship next.
+The lesson parallels <a href="/work/blok">Blok</a>: you do not have a design system without reusable code developers trust; but at WFP I am learning that *how* you retire the old one matters as much as *what* you ship next.
 
 </CaseSubsection>
 

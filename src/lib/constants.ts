@@ -17,4 +17,4 @@ export const CLOUD_PORTAL_REDESIGN_PATH = "/work/cloud-portal-redesign"
 export const WFP_DESIGN_SYSTEM_PATH = "/work/wfp-design-system"
 
 export const WFP_COLOUR_SYSTEM_URL =
-  "https://www.figma.com/proto/suBu11QCvNmOqmQiiKEcIl?scaling=scale-down-width&hide-ui"
+  "https://www.figma.com/proto/suBu11QCvNmOqmQiiKEcIl?scaling=contain&hide-ui=1"

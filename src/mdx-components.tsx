@@ -5,6 +5,7 @@ import { CaseStudyLayout } from "@/components/case-study/case-study-layout"
 import { CaseSubsection } from "@/components/case-study/case-subsection"
 import { FigmaEmbed } from "@/components/case-study/figma-embed"
 import { YouTubeEmbed } from "@/components/case-study/youtube-embed"
+import { WorkCardEmbed } from "@/components/work-card"
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
@@ -13,6 +14,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     CaseSubsection,
     FigmaEmbed,
     YouTubeEmbed,
+    WorkCardEmbed,
     ...components,
   }
 }
