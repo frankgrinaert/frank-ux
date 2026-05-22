@@ -13,7 +13,7 @@ export const wfpDesignSystemMeta: CaseStudyMeta = {
   slug: "wfp-design-system",
   title: "Design system for the World Food Programme",
   summary:
-    "Rebooting the UN World Food Programme’s corporate design system so dozens of IT solutions can ship accessible UI faster — with a developer experience that drives adoption, not avoidance.",
+    "Rebooted the World Food Programme’s corporate design system, so dozens of IT solutions can ship accessible UI faster.",
   tags: ["Design systems", "Design engineering", "Accessibility"],
 }
 
