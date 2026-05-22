@@ -48,7 +48,7 @@ Wire a new case by adding the `.mdx` file, re-exporting it from `src/pages/work/
 |------|---------|
 | `src/pages/home.tsx` | Homepage |
 | `src/content/work/*.mdx` | Case study copy (MDX + YAML frontmatter) |
-| `public/work/<slug>/` | Case study images and other static assets |
+| `public/work/` | Work and case study images |
 | `src/components/ui/` | shadcn UI used on the homepage |
 | `public/CNAME` | Custom domain for GitHub Pages |
 

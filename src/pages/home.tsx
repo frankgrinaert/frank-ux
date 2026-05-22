@@ -28,7 +28,7 @@ const WORK_ITEMS: WorkItem[] = [
     title: "Design system for Sitecore",
     summary:
       "After 6 acquisitions, Sitecore’s portfolio was fragmented. Blok became the shared foundation adopted by 12+ product teams, to ship faster with better UX.",
-    image: "/work/blok/blok-site.png",
+    image: "/work/blok-site.png",
     imageAlt: "Blok design system — documentation site and component library",
     tags: ["Design systems", "Enterprise UX", "Platform"],
   },
