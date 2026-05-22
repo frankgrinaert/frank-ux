@@ -1,5 +1,5 @@
 import { WorkCard } from "@/components/work-card"
-import { WORK_ITEMS } from "@/lib/work-items"
+import { WORK_ITEMS } from "@/content/work/case-meta"
 
 export function HomePage() {
   return (

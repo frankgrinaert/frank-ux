@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 
 import { Badge } from "@/components/ui/badge"
-import { getWorkItem, type WorkItemId } from "@/lib/work-items"
+import { getWorkItem, type WorkItemId } from "@/content/work/case-meta"
 import { cn } from "@/lib/utils"
 
 const cardClassName =

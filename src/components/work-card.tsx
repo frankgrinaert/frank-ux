@@ -9,7 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import type { WorkItem } from "@/lib/work-items"
+import type { WorkItem } from "@/content/work/case-meta"
 import { cn } from "@/lib/utils"
 
 const linkClassName =
