@@ -1,0 +1,126 @@
+import { wfpDesignSystemMeta } from "@/content/work/case-meta"
+
+<CaseStudyLayout title={wfpDesignSystemMeta.title} summary={wfpDesignSystemMeta.summary} tags={wfpDesignSystemMeta.tags}>
+
+<img src="/work/wfp-ds-demo.png" alt="WFP Design System Demo App" className="w-full rounded-lg border shadow-lg" />
+
+<CaseSection id="context">
+
+<CaseSubsection title="UX at humanitarian scale">
+
+The World Food Programme runs a large portfolio of **100+ internal IT solutions**. Most are built and maintained by **external development partners**, with limited UX oversight.
+
+Without a design system teams actually use, every product reinvents interface patterns. Accessibility drifts, QA churn grows, and engineering time disappears into one-off styling.
+
+The business stake is simple: **one credible foundation for quality and speed of delivery** across the IT portfolio.
+
+</CaseSubsection>
+
+</CaseSection>
+
+<CaseSection id="problem">
+
+<CaseSubsection title="A system that worked against delivery">
+
+My audit of the legacy design system showed it was outdated, buried in tech debt, and painful to use and maintain. Worse: there was **no dedicated team** to evolve it.
+
+Developers worked around it; hacks, duplicated components, slow releases.
+
+Accessibility was inconsistent.
+
+</CaseSubsection>
+
+</CaseSection>
+
+<CaseSection id="approach">
+
+<CaseSubsection title="Make the case to start fresh">
+
+Through internal presentations, I spelled out the cost of staying on the old foundation. I ran workshops with the architects to benchmark modern frontend approaches, and we reached agreement: **reboot**, not incremental patch.
+
+</CaseSubsection>
+
+<CaseSubsection title="Zero to one">
+
+I hired a frontend engineer and led a **zero-to-one** programme: a new code-first foundation shipped in roughly **two months**.
+
+The new system lives at <a href="https://designsystem.wfp.org/" target="_blank" rel="noopener noreferrer">designsystem.wfp.org</a>:
+
+<a
+  href="https://designsystem.wfp.org/"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="WFP Design System site (opens in new tab)"
+  className="block"
+>
+  <img
+    src="/work/wfp-ds-site.png"
+    alt="WFP Design System site"
+    className="w-full rounded-lg border shadow-lg my-10"
+  />
+</a>
+
+</CaseSubsection>
+
+<CaseSubsection title="Accessible by default">
+
+The components have accessibility built in — keyboard navigation, screen reader support, etc.
+
+I also **revised the colour system** to optimise for contrast requirements:
+
+<WorkCardEmbed id="accessible-colour-system" />
+
+</CaseSubsection>
+
+<CaseSubsection title="Evangelise and support">
+
+I evangelise internally and support pilot teams through migration.
+
+Internal introduction deck:
+
+<FigmaEmbed
+  src="https://www.figma.com/proto/XjIDpiEMK667J8VGvrrr9y?scaling=scale-down-width"
+  title="WFP Design System initiative — internal presentation"
+/>
+
+</CaseSubsection>
+
+
+
+</CaseSection>
+
+<CaseSection id="outcome">
+
+<CaseSubsection title="Roll-out in progress">
+
+This programme started a few months ago; adoption metrics are still forming. What is already true:
+
+</CaseSubsection>
+
+<CaseSubsection title="Future-proof tech">
+
+Legacy solutions have a credible path to modernise frontends instead of perpetuating technical and design debt.
+
+</CaseSubsection>
+
+<CaseSubsection title="AI enablement">
+
+The design system is ideally suited to AI-assisted development. This can reduce dependency on Engineering, by enabling non-engineers to build interfaces autonomously.
+
+</CaseSubsection>
+
+</CaseSection>
+
+<CaseSection id="reflections">
+
+<CaseSubsection title="Read the room">
+
+I underestimated sensitivities around the old system; sunk-cost attachment and pride in work that had clearly stopped scaling. I moved fast, delivered the new foundation in record time, and got the technical outcome. I also strained relationships by bulldozing past resistance instead of bringing more people along earlier.
+
+The lesson parallels <a href="/work/blok">Blok</a>: you do not have a design system without reusable code developers trust; but at WFP I am learning that *how* you retire the old one matters as much as *what* you ship next.
+
+</CaseSubsection>
+
+</CaseSection>
+
+</CaseStudyLayout>

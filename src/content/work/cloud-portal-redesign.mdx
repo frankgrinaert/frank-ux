@@ -1,0 +1,108 @@
+import { cloudPortalRedesignMeta } from "@/content/work/case-meta"
+
+<CaseStudyLayout title={cloudPortalRedesignMeta.title} summary={cloudPortalRedesignMeta.summary} tags={cloudPortalRedesignMeta.tags}>
+
+<img
+  src="/work/portal-redesign-thumb.png"
+  alt="Early Cloud Portal with heavy homepage content — banners, recommendations, and try-apps sections"
+  className="w-full rounded-lg"
+/>
+
+<CaseSection id="context">
+
+<CaseSubsection title="Identity crisis">
+
+While building the <a href="/work/cloud-portal">Cloud Portal &amp; app switcher</a>, the suite finally had a front door — but the homepage was still taking shape in beta.
+
+</CaseSubsection>
+
+</CaseSection>
+
+<CaseSection id="problem">
+
+<CaseSubsection title="Homepage bloat">
+
+{/* The portal fell into [homepage syndrome](https://youtu.be/99e6d2purlo?t=300) */}
+
+Many stakeholders and no single strategy on what the portal should be — app launcher, deployment tool, user admininistration, billboard, … ?
+
+In the absence of focus, the answer became: ‘everything and nothing’.
+
+The portal homepage had become cluttered with content, lacking hierarchy and direction. Early-access users felt overwhelmed and disoriented.
+
+<img
+  src="/work/portal-redesign-clutter.png"
+  alt="Early Cloud Portal with heavy homepage content"
+  className="w-full rounded-lg my-10"
+/>
+
+This was not a good first impression to make, as an aspiring SaaS platform.
+
+</CaseSubsection>
+
+</CaseSection>
+
+<CaseSection id="approach">
+
+<CaseSubsection title="Course-correct with evidence">
+
+To inform the way forward, **I interviewed early-access users**, synthesised findings, and presented them to the team: **users were overloaded**; prized features were invisible in practice.
+
+The evidence secured buy-in for a significant simplification.
+
+I translated the findings into a **streamlined redesign** of the portal & app switcher.
+
+<FigmaEmbed
+  src="https://www.figma.com/proto/t0NCQfaEOmsZQrmmjCGZaO?scaling=scale-down-width"
+  title="Research readout and recommendations"
+/>
+
+</CaseSubsection>
+
+<CaseSubsection title="Deliver with care">
+
+To ensure the redesign shipped as intended, I worked hand-in-hand with engineering on all the specifics: the dynamic recommendations system, responsiveness, and correct use of the <a href="/work/blok">design system</a>.
+
+</CaseSubsection>
+
+</CaseSection>
+
+<CaseSection id="outcome">
+
+<CaseSubsection title="A homepage that works">
+
+We shipped a focused Cloud Portal homepage, optimized for the actual needs of the users and the business:
+
+<img
+  src="/work/portal-shipped.png"
+  alt="Sitecore Cloud Portal redesigned"
+  className="w-full rounded-lg my-10"
+/>
+
+<img
+  src="/work/portal-shipped-switcher.png"
+  alt="Sitecore Cloud Portal redesigned (app switcher open)"
+  className="w-full rounded-lg my-10"
+/>
+
+</CaseSubsection>
+
+</CaseSection>
+
+<CaseSection id="reflections">
+
+<CaseSubsection title="Debate with data">
+
+Concrete customer evidence is more persuasive than theoretical arguments. Run it early, before opinions harden.
+
+</CaseSubsection>
+
+<CaseSubsection title="Share the why">
+
+Engineers are often starved for business context and strongly appreciate knowing the ‘why’ behind a change.
+
+</CaseSubsection>
+
+</CaseSection>
+
+</CaseStudyLayout>
