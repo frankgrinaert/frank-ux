@@ -31,7 +31,7 @@ export const WORK_ITEMS: WorkItem[] = [
   {
     id: "wfp-design-system",
     href: WFP_DESIGN_SYSTEM_PATH,
-    title: "WFP Design System",
+    title: "Design System for the World Food Programme",
     summary:
       "Rebooted WFP’s corporate design system so IT solutions ship accessible UI faster — code-first, AI-ready, built for adoption across external dev teams.",
     image: "/work/wfp-ds-thumb.png",
@@ -75,7 +75,7 @@ export const WORK_ITEMS: WorkItem[] = [
 export type WorkItemId = (typeof WORK_ITEMS)[number]["id"]
 
 const workItemsById = Object.fromEntries(
-  WORK_ITEMS.map((item) => [item.id, item]),
+  WORK_ITEMS.map((item) => [item.id, item])
 ) as Record<WorkItemId, WorkItem>
 
 export function getWorkItem(id: WorkItemId): WorkItem {
