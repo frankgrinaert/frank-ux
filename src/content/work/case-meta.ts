@@ -20,7 +20,7 @@ const workEntries = {
     slug: "blok",
     title: "Design system for Sitecore",
     summary:
-      "After 6 acquisitions, Sitecore’s portfolio was fragmented. Blok became the shared foundation adopted by 12+ product teams, to ship faster with better UX.",
+      "Blok Design System became the shared foundation adopted by 12+ product teams, to ship faster with better UX.",
     tags: ["Design systems", "Platform UX"],
     href: BLOK_PATH,
     image: "/work/blok-thumb.png",
@@ -30,7 +30,7 @@ const workEntries = {
     slug: "wfp-design-system",
     title: "Design system for the World Food Programme",
     summary:
-      "Rebooted the World Food Programme’s corporate design system, so dozens of IT solutions can ship accessible UI faster.",
+      "Rebooted the corporate design system, so dozens of IT solutions can ship accessible UI faster.",
     tags: ["Design systems", "Accessibility"],
     href: WFP_DESIGN_SYSTEM_PATH,
     image: "/work/wfp-ds-thumb.png",
@@ -40,7 +40,7 @@ const workEntries = {
     slug: "cloud-portal",
     title: "Sitecore Cloud Portal & app\u00A0switcher",
     summary:
-      "Designed and helped build the single entry point and app\u00A0switcher for Sitecore’s multi-product cloud suite — one front door into a fragmented portfolio.",
+      "Designed and helped build the single entry point and app\u00A0switcher for Sitecore’s multi-product cloud suite.",
     tags: ["Platform UX"],
     href: CLOUD_PORTAL_PATH,
     image: "/work/portal-thumb.png",
@@ -48,12 +48,12 @@ const workEntries = {
   },
   "cloud-portal-redesign": {
     slug: "cloud-portal-redesign",
-    title: "Cloud Portal homepage redesign",
+    title: "Sitecore Cloud Portal redesign",
     summary:
-      "Used early-access research to challenge homepage bloat on Sitecore’s Cloud Portal, secure PM buy-in, and ship a portal scoped to jobs-to-be-done.",
+      "Used early-access research to challenge homepage bloat on Sitecore’s Cloud Portal.",
     tags: ["User research", "Platform UX"],
     href: CLOUD_PORTAL_REDESIGN_PATH,
-    image: "/work/portal-bloated.png",
+    image: "/work/portal-redesign-thumb.png",
     imageAlt:
       "Early Cloud Portal homepage before research-driven simplification",
   },
