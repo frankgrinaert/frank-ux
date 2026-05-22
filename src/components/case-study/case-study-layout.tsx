@@ -18,9 +18,9 @@ export function CaseStudyLayout({
   children,
 }: CaseStudyLayoutProps) {
   return (
-    <main className="min-h-svh">
+    <main className="overflow-x-hidden">
       <CaseHeader title={title} summary={summary} tags={tags} />
-      <article className="mx-auto max-w-6xl space-y-16 px-6 pt-16 pb-12 lg:space-y-20 lg:px-8 lg:pt-20 lg:pb-16">
+      <article className="mx-auto max-w-6xl space-y-16 px-6 pt-16 lg:space-y-20 lg:px-8 lg:pt-20">
         {children}
       </article>
     </main>
