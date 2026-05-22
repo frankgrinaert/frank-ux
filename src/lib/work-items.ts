@@ -48,7 +48,7 @@ export const WORK_ITEMS: WorkItem[] = [
     href: CLOUD_PORTAL_PATH,
     title: cloudPortalMeta.title,
     summary: cloudPortalMeta.summary,
-    image: "/work/portal-hero.png",
+    image: "/work/portal-thumb.png",
     imageAlt: "Sitecore Cloud Portal — unified entry to the suite",
     tags: ["Platform UX", "Enterprise UX"],
   },

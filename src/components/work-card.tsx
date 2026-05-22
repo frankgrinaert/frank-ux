@@ -9,7 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { getWorkItem, type WorkItem, type WorkItemId } from "@/lib/work-items"
+import type { WorkItem } from "@/lib/work-items"
 import { cn } from "@/lib/utils"
 
 const linkClassName =
@@ -17,7 +17,6 @@ const linkClassName =
 
 type WorkCardProps = {
   item: WorkItem
-  layout?: "vertical" | "horizontal"
   className?: string
 }
 
@@ -55,7 +54,9 @@ function WorkCardTags({ tags }: { tags: readonly string[] }) {
     <ul className="flex flex-wrap gap-2">
       {tags.map((tag) => (
         <li key={tag}>
-          <Badge variant="secondary">{tag}</Badge>
+          <Badge variant="secondary" className="font-normal">
+            {tag}
+          </Badge>
         </li>
       ))}
     </ul>
@@ -89,50 +90,6 @@ function WorkCardVertical({ item }: { item: WorkItem }) {
   )
 }
 
-function WorkCardHorizontal({ item }: { item: WorkItem }) {
-  return (
-    <WorkCardLink item={item} className="w-full">
-      <article className="flex w-full flex-row items-stretch overflow-hidden rounded-4xl bg-card text-card-foreground shadow-md ring-1 ring-foreground/5 transition-shadow group-hover:shadow-lg dark:ring-foreground/10">
-        <div className="w-28 shrink-0 sm:w-36">
-          <img
-            src={item.image}
-            alt={item.imageAlt}
-            className="work-card-embed__image size-full object-cover object-center"
-          />
-        </div>
-        <div className="flex min-w-0 flex-1 flex-col justify-center gap-2 p-4 sm:gap-2.5 sm:p-5">
-          <h4 className="font-heading text-base font-semibold leading-snug sm:text-lg">
-            {item.title}
-          </h4>
-          <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
-            {item.summary}
-          </p>
-          {item.tags && item.tags.length > 0 ? (
-            <WorkCardTags tags={item.tags} />
-          ) : null}
-        </div>
-      </article>
-    </WorkCardLink>
-  )
-}
-
-export function WorkCard({ item, layout = "vertical" }: WorkCardProps) {
-  if (layout === "horizontal") {
-    return <WorkCardHorizontal item={item} />
-  }
+export function WorkCard({ item }: WorkCardProps) {
   return <WorkCardVertical item={item} />
-}
-
-type WorkCardEmbedProps = {
-  id: WorkItemId
-}
-
-/** Horizontal work card for embedding inside case study prose. */
-export function WorkCardEmbed({ id }: WorkCardEmbedProps) {
-  const item = getWorkItem(id)
-  return (
-    <div className="work-card-embed not-prose my-6 w-full max-w-none">
-      <WorkCard item={item} layout="horizontal" />
-    </div>
-  )
 }
