@@ -8,7 +8,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
-import { Check, ExternalLink, Mail } from "lucide-react"
+import { Check, ExternalLink, FileUser, Mail } from "lucide-react"
 import { CV_URL, LINKEDIN_URL } from "@/lib/constants"
 import { copyEmailAddress, getEmailAddress } from "@/lib/email"
 
@@ -28,7 +28,7 @@ export function SiteHeader() {
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4 lg:px-8">
           <Link
             to="/"
-            className="font-heading text-sm font-semibold text-primary sm:text-lg"
+            className="font-heading text-sm font-semibold text-primary transition-colors hover:text-foreground sm:text-lg"
           >
             frank-ux.com
           </Link>
@@ -53,7 +53,7 @@ export function SiteHeader() {
                 <a href={CV_URL} target="_blank" rel="noopener noreferrer" />
               }
             >
-              <ExternalLink />
+              <FileUser />
               CV
             </Button>
             <Button

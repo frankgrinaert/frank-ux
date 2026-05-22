@@ -25,7 +25,7 @@ export function HomePage() {
             id="work-heading"
             className="font-heading text-2xl font-semibold tracking-tight sm:text-3xl"
           >
-            Highlighted work
+            Selected work
           </h2>
           <ul className="mt-8 grid gap-6 sm:grid-cols-2">
             {WORK_ITEMS.map((item) => (
