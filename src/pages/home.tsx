@@ -3,14 +3,16 @@ import { Link } from "react-router-dom"
 import { Badge } from "@/components/ui/badge"
 import {
   Card,
-  CardAction,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { ArrowRight, ExternalLink } from "lucide-react"
-import { BLOK_PATH, WFP_COLOUR_SYSTEM_URL } from "@/lib/constants"
+import {
+  BLOK_PATH,
+  CLOUD_PORTAL_PATH,
+  WFP_COLOUR_SYSTEM_URL,
+} from "@/lib/constants"
 
 type WorkItem = {
   title: string
@@ -24,12 +26,21 @@ type WorkItem = {
 
 const WORK_ITEMS: WorkItem[] = [
   {
+    href: CLOUD_PORTAL_PATH,
+    title: "Sitecore Cloud Portal & App\u00A0switcher",
+    summary:
+      "Designed and helped build the single entry point for Sitecore’s multi-product cloud suite — then used research to cut homepage bloat and align the portal with how customers navigate the platform.",
+    image: "/work/portal-hero.png",
+    imageAlt: "Sitecore Cloud Portal — unified entry to the suite",
+    tags: ["Platform UX", "Enterprise UX", "User research"],
+  },
+  {
     href: BLOK_PATH,
     title: "Design system for Sitecore",
     summary:
       "After 6 acquisitions, Sitecore’s portfolio was fragmented. Blok became the shared foundation adopted by 12+ product teams, to ship faster with better UX.",
-    image: "/work/blok-site.png",
-    imageAlt: "Blok design system — documentation site and component library",
+    image: "/work/blok-hero.png",
+    imageAlt: "Fragmented product portfolio after acquisitions",
     tags: ["Design systems", "Enterprise UX", "Platform"],
   },
   {

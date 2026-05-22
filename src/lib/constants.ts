@@ -10,5 +10,7 @@ export const SITE_TAGLINE =
 
 export const BLOK_PATH = "/work/blok"
 
+export const CLOUD_PORTAL_PATH = "/work/cloud-portal"
+
 export const WFP_COLOUR_SYSTEM_URL =
   "https://www.figma.com/proto/suBu11QCvNmOqmQiiKEcIl?scaling=scale-down-width&hide-ui"
