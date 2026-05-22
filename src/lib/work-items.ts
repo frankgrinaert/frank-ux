@@ -1,4 +1,11 @@
 import {
+  accessibleColourSystemTitle,
+  blokMeta,
+  cloudPortalMeta,
+  cloudPortalRedesignMeta,
+  wfpDesignSystemMeta,
+} from "@/content/work/case-meta"
+import {
   BLOK_PATH,
   CLOUD_PORTAL_PATH,
   CLOUD_PORTAL_REDESIGN_PATH,
@@ -21,9 +28,8 @@ export const WORK_ITEMS: WorkItem[] = [
   {
     id: "blok",
     href: BLOK_PATH,
-    title: "Design system for Sitecore",
-    summary:
-      "After 6 acquisitions, Sitecore’s portfolio was fragmented. Blok became the shared foundation adopted by 12+ product teams, to ship faster with better UX.",
+    title: blokMeta.title,
+    summary: blokMeta.summary,
     image: "/work/blok-thumb.png",
     imageAlt: "Fragmented product portfolio after acquisitions",
     tags: ["Design systems", "Enterprise UX", "Platform"],
@@ -31,9 +37,8 @@ export const WORK_ITEMS: WorkItem[] = [
   {
     id: "wfp-design-system",
     href: WFP_DESIGN_SYSTEM_PATH,
-    title: "Design System for the World Food Programme",
-    summary:
-      "Rebooted WFP’s corporate design system so IT solutions ship accessible UI faster — code-first, AI-ready, built for adoption across external dev teams.",
+    title: wfpDesignSystemMeta.title,
+    summary: wfpDesignSystemMeta.summary,
     image: "/work/wfp-ds-thumb.png",
     imageAlt: "WFP Design System — accessible colour tokens",
     tags: ["Design systems", "Design engineering", "Accessibility"],
@@ -41,9 +46,8 @@ export const WORK_ITEMS: WorkItem[] = [
   {
     id: "cloud-portal",
     href: CLOUD_PORTAL_PATH,
-    title: "Sitecore Cloud Portal & App\u00A0switcher",
-    summary:
-      "Designed and helped build the single entry point and app\u00A0switcher for Sitecore’s multi-product cloud suite — one front door into a fragmented portfolio.",
+    title: cloudPortalMeta.title,
+    summary: cloudPortalMeta.summary,
     image: "/work/portal-hero.png",
     imageAlt: "Sitecore Cloud Portal — unified entry to the suite",
     tags: ["Platform UX", "Enterprise UX"],
@@ -51,9 +55,8 @@ export const WORK_ITEMS: WorkItem[] = [
   {
     id: "cloud-portal-redesign",
     href: CLOUD_PORTAL_REDESIGN_PATH,
-    title: "Cloud Portal homepage redesign",
-    summary:
-      "Used early-access research to challenge homepage bloat on Sitecore’s Cloud Portal, secure PM buy-in, and ship a portal scoped to jobs-to-be-done.",
+    title: cloudPortalRedesignMeta.title,
+    summary: cloudPortalRedesignMeta.summary,
     image: "/work/portal-bloated.png",
     imageAlt:
       "Early Cloud Portal homepage before research-driven simplification",
@@ -63,7 +66,7 @@ export const WORK_ITEMS: WorkItem[] = [
     id: "accessible-colour-system",
     href: WFP_COLOUR_SYSTEM_URL,
     external: true,
-    title: "Accessible colour system",
+    title: accessibleColourSystemTitle,
     summary:
       "Enabled accessible contrast by default, without one-off fixes per screen.",
     image: "/work/a11y-colours-thumb.png",
