@@ -1,0 +1,105 @@
+---
+slug: wfp-design-system
+title: WFP Design System
+summary: Rebooting the UN World Food Programme’s corporate design system so dozens of IT solutions can ship accessible UI faster — with a developer experience that drives adoption, not avoidance.
+tags:
+  - Design systems
+  - Design engineering
+  - Accessibility
+---
+
+<CaseStudyLayout title={meta.title} summary={meta.summary} tags={meta.tags}>
+
+<a
+  href="https://designsystem.wfp.org/"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Open WFP Design System site (opens in new tab)"
+  className="block rounded-lg border border-border bg-muted/50 p-10 text-center transition-colors hover:border-primary/30"
+>
+  <span className="text-base font-medium text-primary">designsystem.wfp.org</span>
+  <p className="mt-2 text-sm text-muted-foreground">
+    Live documentation — actively in development since late 2025
+  </p>
+</a>
+
+<CaseSection id="context">
+
+<CaseSubsection title="UX at humanitarian scale">
+
+The World Food Programme runs a large portfolio of internal IT solutions — humanitarian operations, logistics, finance, and more. Most are built and maintained by **external development partners**, with limited central UX oversight.
+
+Without a design system teams actually use, every product reinvents interface patterns. Accessibility drifts, QA churn grows, and engineering time disappears into one-off styling. The business stake is simple: **one credible foundation for quality and delivery speed across the IT portfolio** — not another Figma library designers alone maintain.
+
+</CaseSubsection>
+
+</CaseSection>
+
+<CaseSection id="problem">
+
+<CaseSubsection title="A system that worked against delivery">
+
+Audits with Solution Architects were clear: the legacy design system was outdated, buried in tech debt, and painful to use and maintain. There was **no dedicated team** to evolve it.
+
+Developers worked around it — hacks, duplicated components, slow releases. Accessibility was inconsistent. The product gap was both **experience** (low adoption, unreliable UI) and **platform** (not maintainable or ready for how WFP wants to build next, including AI-assisted workflows).
+
+</CaseSubsection>
+
+</CaseSection>
+
+<CaseSection id="approach">
+
+<CaseSubsection title="Make the case to start fresh">
+
+I led a formal audit and an internal presentation to spell out the cost of staying on the old foundation. Together with architects, we benchmarked modern frontend approaches and agreed: **reboot**, not incremental patch.
+
+Workshops across design, product, and engineering crowdsourced requirements and built buy-in. I hired a frontend engineer and led a **zero-to-one** programme — a new code-first foundation shipped in roughly **two months**.
+
+<FigmaEmbed
+  src="https://www.figma.com/proto/XjIDpiEMK667J8VGvrrr9y?scaling=scale-down-width"
+  title="WFP Design System initiative — internal presentation"
+/>
+
+</CaseSubsection>
+
+<CaseSubsection title="Ship code teams can trust">
+
+The new system lives at <a href="https://designsystem.wfp.org/" target="_blank" rel="noopener noreferrer">designsystem.wfp.org</a>: tokens, components, and documentation aimed at implementation in vendor codebases, not slide decks.
+
+Early stream: a full revision of colour semantics so teams hit contrast requirements by default — documented in the <a href="https://www.figma.com/proto/suBu11QCvNmOqmQiiKEcIl?scaling=scale-down-width&hide-ui=1" target="_blank" rel="noopener noreferrer">Accessible colour system</a> prototype.
+
+I evangelise internally, support pilot teams through migration, and keep architects aligned on an **AI-ready** stack — structured for AI-assisted development and, eventually, code prototypes from UX and Product without a full engineering loop.
+
+</CaseSubsection>
+
+</CaseSection>
+
+<CaseSection id="outcome">
+
+<CaseSubsection title="Rolling out (in progress)">
+
+This programme started a few months ago; adoption metrics are still forming. What is already true:
+
+**Portfolio:** Legacy solutions have a credible path to modernise frontends instead of perpetuating bespoke UI.
+
+**Platform:** A shared, accessible foundation pilots across IT products — the metric I care about is **teams actually building on the system**, not deliverable count.
+
+**Forward look:** An AI-ready design system so assisted development — and later, designer- or PM-led prototypes — sit on the same components production uses.
+
+</CaseSubsection>
+
+</CaseSection>
+
+<CaseSection id="reflections">
+
+<CaseSubsection title="Read the room">
+
+I underestimated sensitivities around the old system — sunk-cost attachment and pride in work that had clearly stopped scaling. I moved fast, delivered the new foundation in record time, and got the technical outcome. I also **strained relationships** by bulldozing past resistance instead of bringing more people along earlier.
+
+The lesson parallels <a href="/work/blok">Blok</a>: you do not have a design system without reusable code developers trust — but at WFP I am learning that **how** you retire the old one matters as much as **what** you ship next.
+
+</CaseSubsection>
+
+</CaseSection>
+
+</CaseStudyLayout>
