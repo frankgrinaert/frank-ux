@@ -1,5 +1,4 @@
-export const CV_URL =
-  "https://www.figma.com/proto/k8lvoh7nfDJVLTlee81J3e?scaling=min-zoom&hide-ui=1"
+export const CV_URL = "/frank-grinaert-cv.pdf"
 
 export const LINKEDIN_URL = "https://www.linkedin.com/in/frank-ux"
 
