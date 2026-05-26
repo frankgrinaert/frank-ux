@@ -1,3 +1,4 @@
+import type { ReactNode } from "react"
 import { useState } from "react"
 import { Link } from "react-router-dom"
 
@@ -8,9 +9,84 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
-import { Check, ExternalLink, FileUser, Mail } from "lucide-react"
+import { LinkedInIcon } from "@/components/icons/linkedin-icon"
+import { Check, Copy, FileUser, Mail } from "lucide-react"
 import { CV_URL, LINKEDIN_URL } from "@/lib/constants"
+import { cn } from "@/lib/utils"
 import { copyEmailAddress, getEmailAddress } from "@/lib/email"
+
+type HeaderNavButtonProps = {
+  label: string
+  icon: ReactNode
+  /** Desktop tooltip (optional). Mobile always uses `label` unless `mobileTooltip` is set. */
+  tooltip?: string
+  mobileTooltip?: string
+  onClick?: () => void
+  render?: React.ComponentProps<typeof Button>["render"]
+  buttonClassName?: string
+}
+
+function HeaderNavButton({
+  label,
+  icon,
+  tooltip,
+  mobileTooltip,
+  onClick,
+  render,
+  buttonClassName,
+}: HeaderNavButtonProps) {
+  const mobileTip = mobileTooltip ?? label
+
+  return (
+    <>
+      <Tooltip>
+        <TooltipTrigger
+          render={
+            <Button
+              variant="secondary"
+              size="icon-sm"
+              className={cn("sm:hidden", buttonClassName)}
+              render={render}
+              onClick={onClick}
+              aria-label={label}
+            />
+          }
+        >
+          {icon}
+        </TooltipTrigger>
+        <TooltipContent side="bottom">{mobileTip}</TooltipContent>
+      </Tooltip>
+      {tooltip ? (
+        <Tooltip>
+          <TooltipTrigger
+            render={
+              <Button
+                variant="secondary"
+                className={cn("hidden sm:inline-flex", buttonClassName)}
+                render={render}
+                onClick={onClick}
+              />
+            }
+          >
+            {icon}
+            {label}
+          </TooltipTrigger>
+          <TooltipContent side="bottom">{tooltip}</TooltipContent>
+        </Tooltip>
+      ) : (
+        <Button
+          variant="secondary"
+          className={cn("hidden sm:inline-flex", buttonClassName)}
+          render={render}
+          onClick={onClick}
+        >
+          {icon}
+          {label}
+        </Button>
+      )}
+    </>
+  )
+}
 
 export function SiteHeader() {
   const [emailCopied, setEmailCopied] = useState(false)
@@ -21,6 +97,9 @@ export function SiteHeader() {
     setEmailCopied(true)
     window.setTimeout(() => setEmailCopied(false), 2000)
   }
+
+  const emailLabel = emailCopied ? "Copied!" : "Email"
+  const emailTooltip = emailCopied ? "Copied!" : `Copy ${getEmailAddress()}`
 
   return (
     <TooltipProvider>
@@ -36,28 +115,33 @@ export function SiteHeader() {
             className="flex flex-wrap items-center justify-end gap-1"
             aria-label="Site"
           >
-            <Tooltip>
-              <TooltipTrigger
-                render={
-                  <Button variant="secondary" onClick={handleCopyEmail} />
-                }
-              >
-                {emailCopied ? <Check /> : <Mail />}
-                {emailCopied ? "Copied!" : "Email"}
-              </TooltipTrigger>
-              <TooltipContent side="bottom">{getEmailAddress()}</TooltipContent>
-            </Tooltip>
-            <Button
-              variant="secondary"
+            <HeaderNavButton
+              label={emailLabel}
+              buttonClassName="group/email"
+              icon={
+                emailCopied ? (
+                  <Check />
+                ) : (
+                  <span className="relative inline-flex size-4 shrink-0">
+                    <Mail className="size-4 transition-opacity group-hover/email:opacity-0" />
+                    <Copy className="absolute inset-0 size-4 opacity-0 transition-opacity group-hover/email:opacity-100" />
+                  </span>
+                )
+              }
+              tooltip={emailTooltip}
+              mobileTooltip={emailTooltip}
+              onClick={handleCopyEmail}
+            />
+            <HeaderNavButton
+              label="CV"
+              icon={<FileUser />}
               render={
                 <a href={CV_URL} target="_blank" rel="noopener noreferrer" />
               }
-            >
-              <FileUser />
-              CV
-            </Button>
-            <Button
-              variant="secondary"
+            />
+            <HeaderNavButton
+              label="LinkedIn"
+              icon={<LinkedInIcon />}
               render={
                 <a
                   href={LINKEDIN_URL}
@@ -65,10 +149,7 @@ export function SiteHeader() {
                   rel="noopener noreferrer"
                 />
               }
-            >
-              <ExternalLink />
-              LinkedIn
-            </Button>
+            />
           </nav>
         </div>
       </header>

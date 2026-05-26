@@ -33,12 +33,19 @@ function toFigmaEmbedSrc(src: string): string {
 
 export function FigmaEmbed({ src, title = "Figma embed" }: FigmaEmbedProps) {
   return (
-    <iframe
-      src={toFigmaEmbedSrc(src)}
-      title={title}
-      loading="lazy"
-      allowFullScreen
-      className="aspect-video w-full rounded-lg border border-border"
-    />
+    <div
+      className="relative w-full overflow-hidden rounded-lg border border-border"
+      // 56.25% is exactly the 16:9 aspect ratio (9 / 16 = 0.5625)
+      // We add 45px to account for the white Figma footer
+      style={{ paddingBottom: "calc(56.25% + 45px)" }}
+    >
+      <iframe
+        src={toFigmaEmbedSrc(src)}
+        title={title}
+        loading="lazy"
+        allowFullScreen
+        className="absolute top-0 left-0 h-full w-full"
+      />
+    </div>
   )
 }
